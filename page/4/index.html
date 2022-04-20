@@ -48,7 +48,7 @@
   isHome: true,
   isHighlightShrink: false,
   isToc: false,
-  postUpdate: '2022-04-20 09:05:10'
+  postUpdate: '2022-04-20 10:40:19'
 }</script><noscript><style type="text/css">
   #nav {
     opacity: 1
@@ -137,161 +137,93 @@
       }
     }
     detectApple()
-    })(window)</script><meta name="generator" content="Hexo 6.1.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://s2.loli.net/2022/04/18/lYMgAfU7uI9zCpV.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data is-center"><div class="data-item"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">37</div></a></div><div class="data-item"><a href="/tags/"><div class="headline">Tags</div><div class="length-num">0</div></a></div><div class="data-item"><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header" style="background-image: url('https://images.pexels.com/photos/3875821/pexels-photo-3875821.jpeg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">浪漫生活手册</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="site-info"><h1 id="site-title">浪漫生活手册</h1><div id="site_social_icons"><a class="social-icon" href="https://github.com/mtics" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:lizhw.cs@outlook.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="post_cover left"><a href="/2021/06/08/yuque/%E6%B1%82%E4%BA%8C%E5%8F%89%E6%A0%91%E4%B8%A4%E7%BB%93%E7%82%B9%E6%9C%80%E8%BF%91%E7%9A%84%E5%85%B1%E5%90%8C%E7%A5%96%E5%85%88%E7%BB%93%E7%82%B9/" title="求二叉树两结点最近的共同祖先结点"><img class="post_bg" src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="求二叉树两结点最近的共同祖先结点"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/06/08/yuque/%E6%B1%82%E4%BA%8C%E5%8F%89%E6%A0%91%E4%B8%A4%E7%BB%93%E7%82%B9%E6%9C%80%E8%BF%91%E7%9A%84%E5%85%B1%E5%90%8C%E7%A5%96%E5%85%88%E7%BB%93%E7%82%B9/" title="求二叉树两结点最近的共同祖先结点">求二叉树两结点最近的共同祖先结点</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2021-06-08T02:14:29.000Z" title="Created 2021-06-08 10:14:29">2021-06-08</time></span></div><div class="content">题目要求及思路分析
-题目要求：已知在二叉树中，_ root 为根结点，_ p 和* q 为二叉树中两个结点，试编写求距离它们最近的共同祖先的算法。 —《数据结构习题集（C 语言版）》
-思路：
-显然在这个题目中，递归遍历不适用。同时先中后三种顺序，先序遍历比较合适。
-要利用栈的特性来存储访问目标结点的路径，以便于最后查找它的祖先结点。
-当* p 和* q 的路径都找到后，我们可以看到根结点在栈底，而目标结点在栈顶，这样的话不利于我们比较两条路径上共同的祖先结点。所以，要将两个目标结点的路径栈逆置，使栈顶元素都为根结点，这样在出栈的时候可以比较两个栈顶元素指向的结点。直到出现第一个不同的结点时，取上一个出栈元素，即为距两目标结点最近的共同祖先结点。
+    })(window)</script><meta name="generator" content="Hexo 6.1.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://s2.loli.net/2022/04/18/lYMgAfU7uI9zCpV.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data is-center"><div class="data-item"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">36</div></a></div><div class="data-item"><a href="/tags/"><div class="headline">Tags</div><div class="length-num">12</div></a></div><div class="data-item"><a href="/categories/"><div class="headline">Categories</div><div class="length-num">3</div></a></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header" style="background-image: url('https://images.pexels.com/photos/3875821/pexels-photo-3875821.jpeg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">浪漫生活手册</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="site-info"><h1 id="site-title">浪漫生活手册</h1><div id="site_social_icons"><a class="social-icon" href="https://github.com/mtics" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:lizhw.cs@outlook.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="post_cover left"><a href="/2021/06/08/Techniques/2020-01-07-faster-rcnn-env/" title="Faster-RCNN环境配置"><img class="post_bg" src="https://images.pexels.com/photos/3875821/pexels-photo-3875821.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Faster-RCNN环境配置"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/06/08/Techniques/2020-01-07-faster-rcnn-env/" title="Faster-RCNN环境配置">Faster-RCNN环境配置</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2021-06-08T02:14:29.000Z" title="Created 2021-06-08 10:14:29">2021-06-08</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Techniques/">Techniques</a></span></div><div class="content">Faster-RCNN 环境配置步骤
+创建虚拟环境
+
+12conda create --name &lt;env_name&gt; &lt;package_names&gt;# 例如: conda create --name lzw python=3.6
+
+
+激活虚拟环境
+source activate &lt;env_name&gt;(太老)使用conda activate &lt;env_name&gt;替代
+
+退出虚拟环境
+source deactivate(太老)使用conda deactivate替代
+
+查看已创建环境
+conda env list
+
+安装 pytorch0.4 版本
+12conda install pytorch=0.4.0 cuda80 -c pytorchpip install torch==0.4.0 -f https://download.pytorch.org/whl/cu80/stable #CUDA 8.0 build
+
+克隆 Faster-RCNN.Pytorch 库
+123456789101112# 1. 从Git上克隆git clone  ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2021/06/08/Techniques/2020-01-08-train-with-resnet101-on-pascal_voc/" title="使用Faster-RCNN进行指定GPU训练"><img class="post_bg" src="https://images.pexels.com/photos/3875821/pexels-photo-3875821.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="使用Faster-RCNN进行指定GPU训练"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/06/08/Techniques/2020-01-08-train-with-resnet101-on-pascal_voc/" title="使用Faster-RCNN进行指定GPU训练">使用Faster-RCNN进行指定GPU训练</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2021-06-08T02:14:29.000Z" title="Created 2021-06-08 10:14:29">2021-06-08</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Techniques/">Techniques</a></span></div><div class="content">使用 Faster-RCNN 进行指定 GPU 训练实验内容
+解决了昨日环境配置剩下的问题（三~六），接着昨日第 7 步继续
+
+测试库中用例，检查是否能跑通
+
+在”faster-rcnn.pytorch”文件夹中打开终端
+
+指定 GPU 训练
+12345CUDA_VISIBLE_DEVICES=$GPU_ID python trainval_net.py \            --dataset pascal_voc --net res101 \            --bs $BATCH_SIZE --nw $WORKER_NUMBER \            --lr $LEARNING_RATE --lr_decay_step $DECAY_STEP \            --cuda
+
+
+参数意义：
+CUDA_VISIBLE_DEVICES=$GPU_ID：指明所使用的 GPU ID，$GPU_ID需修改为指定 ID
+--dataset pascal_voc --net res101：在 pascal_voc 上使用 resnet101 进行训练
+--bs $BAT ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2021/06/08/Techniques/2020-01-09-train-with-resnet101-on-pascal_voc/" title="使用Faster-RCNN进行指定GPU训练（续）"><img class="post_bg" src="https://images.pexels.com/photos/3875821/pexels-photo-3875821.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="使用Faster-RCNN进行指定GPU训练（续）"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/06/08/Techniques/2020-01-09-train-with-resnet101-on-pascal_voc/" title="使用Faster-RCNN进行指定GPU训练（续）">使用Faster-RCNN进行指定GPU训练（续）</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2021-06-08T02:14:29.000Z" title="Created 2021-06-08 10:14:29">2021-06-08</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Techniques/">Techniques</a></span></div><div class="content">使用 Faster-RCNN 进行指定 GPU 训练（续）
+今天接着昨天的实验继续跑“多 GPU 训练”
+12python trainval_net.py \ --dataset pascal_voc --net res101 \ --bs 24 --nw 8 \ --lr $LEARING_RATE --lr_decay_step $DECAY_STEP \ --cuda --mGPUs# (pascal_voc.py    self._classes   类别修改)
+
+训练自己的数据集（步骤与之前样例中相同）
+
+训练完成后对数据集进行处理，发现有些图片因为亮度不够或模糊而识别有误。下一步考虑怎么提高图片的清晰度，使识别率提高。
+
+目前有个想法：
+
+计算图片清晰度，如果清晰度不在某个范围的话，进行第二步操作；
+调整图片的亮度和对比度，然后再进行清晰度计算。若清晰度达到要求，则输出；否则，继续调整，直到符合要求。
 
 
 
-算法实现
-两种数据类型的结构体定义
-123456789101112131415161718192021/*-------二叉树的二叉链结点结构定义------*/#define TElemType chartypedef struct BiTNode&#123;			// 结点结构	TElemType data;				// 结点数据	s ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2021/06/08/yuque/%E6%B2%A1%E4%BA%86%E6%89%8B%E6%9C%BA%EF%BC%8C%E6%9C%89%E4%BA%86%E7%84%A6%E8%99%91/" title="没了手机，有了焦虑"><img class="post_bg" src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="没了手机，有了焦虑"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/06/08/yuque/%E6%B2%A1%E4%BA%86%E6%89%8B%E6%9C%BA%EF%BC%8C%E6%9C%89%E4%BA%86%E7%84%A6%E8%99%91/" title="没了手机，有了焦虑">没了手机，有了焦虑</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2021-06-08T02:14:29.000Z" title="Created 2021-06-08 10:14:29">2021-06-08</time></span></div><div class="content">12 月 24 日平安夜，像往常一样我在玩手机，然而手机却突然自动重启了。这种情况之前也发生过，但与之不同的是这次它没能一次重启后就正常开机，而是陷入了“无限重启”中。在大约 3-5 次重启后，手机进入了异常状态。经过在网上查询，我选择了在异常状态页面进行“恢复出厂设置”，还为此花了 3G 的流量开热点下载系统更新包。可是，一切准备就绪后，它还是会无限重启。至此，陪伴了我两年多的手机宣告了报废。
-尴尬的是，一时半会我还没有备用智能机，唯一的老手机也是一台五年前使用的功能机。这意味着，在接下来的一天多里我将无法随心所欲地使用支付宝、微信、QQ 等可以说是日常必须的软件。在屋里的时候因为有电脑和微信还没有显得有多不方便，然而当我 25 日上午需要去找华为售后修手机时，才发现我的生活已经倒退回了 2016 年：
+问题
+问题一：“多 GPU 训练”中出现ctx.input_sizes = tuple(map(lambda i: i.size(ctx.dim), inputs))  ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2021/06/08/Techniques/2020-01-27-mtics-resume-template/" title="利用Hexo打造属于自己的网页版简历"><img class="post_bg" src="https://images.pexels.com/photos/3875821/pexels-photo-3875821.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="利用Hexo打造属于自己的网页版简历"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/06/08/Techniques/2020-01-27-mtics-resume-template/" title="利用Hexo打造属于自己的网页版简历">利用Hexo打造属于自己的网页版简历</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2021-06-08T02:14:29.000Z" title="Created 2021-06-08 10:14:29">2021-06-08</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Techniques/">Techniques</a></span></div><div class="content">利用 Hexo 打造属于自己的网页版简历最近想着做一个网页版的个人简历，想着要满足一下几个需求：
 
-因为手机坏了，没办法通过 NFC 或者支付宝乘坐地铁，我去翻箱倒柜找出了很久不用的地铁卡。幸亏地铁卡里面还有 30 多块钱，不然充值的麻烦也会随之而来——我身上连一元现金都没有。
-从我居住的地方到地铁站有大约一公里的距离，当我下楼的时候下意识地想开一辆共享单车地时候才想起来手机坏了 ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2021/06/08/yuque/%E7%89%A9%E7%90%86%E5%B1%82/" title="物理层"><img class="post_bg" src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="物理层"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/06/08/yuque/%E7%89%A9%E7%90%86%E5%B1%82/" title="物理层">物理层</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2021-06-08T02:14:29.000Z" title="Created 2021-06-08 10:14:29">2021-06-08</time></span></div><div class="content">
-首先强调指出，物理层考虑的是怎样才能在连接各种计算机的传输媒体上传输数据比特流，而不是指具体的传输媒体
+简洁直观不花里胡哨的
+方便修改内容，能根据修改后的内容自动生成网页
 
-物理层的基本概念
-物理层的主要任务：确定与传输媒体的接口有关的一些特性
+这就要求我最好能用静态博客框架来做，如：Hexo、Hugo 等。
+但是找了许多主题，都没有一个很能令我满意的。
+最接近的一个是Crisp Minimal Résumé。
+但是该主题的 Hexo 版本中存在许多 BUG，而且排版松懈、没有照片。
+所以趁着春节无处可去，干脆在家做了个 Hexo 的简历主题——Mtics-Resume。
+本主题在Crisp Minimal Résumé上做了许多修改，使它更符合我的喜好。
+本主题具有以下特点：
 
-机械特性：指明接口所用接线器的形状和尺寸，引脚数目和排列，固定和锁定装置等。
-电气特性：指明在接口电缆的各条线上出现的电压的范围
-功能特性：指明某条线上出现的某一电平的电压表示何种意义
-过程特性：指明对于不同功能的各种可能事件的出现顺序
+简洁直观
+配置简单
+可定制性强
+响应式布局
+在隐藏了 footer 后，可直接打印成为纸质简历
 
+欢迎各位使用 Hexo 或者对本主题有兴趣的大佬试用，并向我提出建议或与我一起开发。
+项目地址：https://github.com/mtics/hexo-mtics-resume
+在线演示：https://mtics.netlify.com/
+Ps: 因本项目及演示都放在 Github ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2021/06/08/Techniques/2020-03-02-introduction-of-gamification/" title="为什么我们会很容易沉迷于游戏，却很难沉迷于学习中呢"><img class="post_bg" src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="为什么我们会很容易沉迷于游戏，却很难沉迷于学习中呢"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/06/08/Techniques/2020-03-02-introduction-of-gamification/" title="为什么我们会很容易沉迷于游戏，却很难沉迷于学习中呢">为什么我们会很容易沉迷于游戏，却很难沉迷于学习中呢</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2021-06-08T02:14:29.000Z" title="Created 2021-06-08 10:14:29">2021-06-08</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Techniques/">Techniques</a></span></div><div class="content">为什么我们会很容易沉迷于游戏，却很难沉迷于学习中呢 
+</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2021/06/08/Techniques/2020-04-08-auto-sign-zzu-jksb/" title="使用Python实现平台自动打卡"><img class="post_bg" src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="使用Python实现平台自动打卡"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/06/08/Techniques/2020-04-08-auto-sign-zzu-jksb/" title="使用Python实现平台自动打卡">使用Python实现平台自动打卡</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2021-06-08T02:14:29.000Z" title="Created 2021-06-08 10:14:29">2021-06-08</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Techniques/">Techniques</a></span></div><div class="content">使用 Python 实现平台自动打卡
+众所周知，人的懒惰是技术发展的一大动力。现在正处疫情期间，因为我总是忘记及时健康打卡而导致被年级群通报，故干脆写了个 Python 脚本来自动打卡。若之后我的身体状态、所在地等信息都没有改变的话，这个脚本就能帮我完成一个小任务嘞。
 
-串行传输：数据在通信线路（传输媒体）上的传输方式一般都是串行传输，即逐个比特按照时间顺序传输。因此物理层还要完成传输方式的转换。
+代码部分代码整体并不难。
+通过使用 Selenium 库，能够将一切网页端的操作模拟成一个真正的用户在操作。
+Selenium 安装库本身并不难安装，只需要运行以下指令即可：
+pip install selenium
+但要注意，要想使用它还需要安装浏览器驱动。比如我用的是 Chrome，就需要安装ChromeDriver。
+ChromeDriver 的版本号要与本机安装的 Chrome 浏览器的版本相同。打开 Chrome，可以通过点击右上角的菜单按钮（即三个竖直排列的”.”），然后选择&quot;帮助&quot; &gt; &quot;关于 Google Chrome&quot;，即可看到浏览器的版本号：
 
-
-数据通信的基础知识数据通信系统的三大部分
-源系统（发送端、发送方）
-
-_源点_：源点设备产生要传输的数据，又称为源站或信源
-_发送器_：
-通常源点生成的数字比特流要通过发送器编码后才能够在传输系统中进行传输。
-典型的发送器就是调制器。
-
-
-
-
-传输系统（传输网络）
-
-目的系统（接收端、接收方）
-
-_接收器_：
-接受传输系统传送过来的信号，并把它转换为能够被目的设备处理的信息。
-典型的接收器就是解调器
-
-
-_终点_：终点设备从接收器获取传送 ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2021/06/08/yuque/%E7%94%B5%E8%B7%AF%E4%BA%A4%E6%8D%A2%E4%B8%8E%E5%88%86%E7%BB%84%E4%BA%A4%E6%8D%A2/" title="电路交换与分组交换"><img class="post_bg" src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="电路交换与分组交换"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/06/08/yuque/%E7%94%B5%E8%B7%AF%E4%BA%A4%E6%8D%A2%E4%B8%8E%E5%88%86%E7%BB%84%E4%BA%A4%E6%8D%A2/" title="电路交换与分组交换">电路交换与分组交换</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2021-06-08T02:14:29.000Z" title="Created 2021-06-08 10:14:29">2021-06-08</time></span></div><div class="content">电路交换
-定义：电路交换是以电路连接为目的的交换方式。通信之前要在通信两方之间建立一条被两方独占的物理通道。
-三个阶段：
-建立连接
-通信
-释放连接
-
-
-优点：
-因为通信线路为通信两方用户专用，数据直达。所以数据传输的时延非常小；
-通信两方之间的屋里通路一旦建立，两方能够随时通信，实时性强；
-两方通信时按发送顺序传送数据，不存在失序问题；
-电路交换既适用于传输模拟信号，也适用于传输数字信号；
-电路交换的交换设备及控制均比较简单。
-
-
-缺点：
-电路交换平均连接建立时间对计算机通信来说较长；
-电路交换家里连接后，物理通路被通信两方独占，即使通信线路空暇，也不能供其它用户使用，因而信道利用率低；
-电路交换时，数据直达。不同类型、不同规格、不同速率的终端非常难相互进行通信，也难以在通信过程中进行差错控制。
-
-
-
-分组交换
-定义：分组交换是以分组为单位进行传输和交换的，它是一种存储——转发交换方式。即将到达交换机的分组先送到存储器临时存储和处理，等到对应的输出电路有空暇时再送出。
-长处：
-分组交换不须要为通信双反预先建立一条专用的通信线路。不存在连接建立时延，用户可随时发送分组；
-因为采用存储转发 ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2021/06/08/yuque/%E7%AC%AC%E4%B8%80%E7%AB%A0/" title="第一章"><img class="post_bg" src="https://images.pexels.com/photos/3875821/pexels-photo-3875821.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="第一章"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/06/08/yuque/%E7%AC%AC%E4%B8%80%E7%AB%A0/" title="第一章">第一章</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2021-06-08T02:14:29.000Z" title="Created 2021-06-08 10:14:29">2021-06-08</time></span></div><div class="content">
-本总结笔记基于钱晓捷老师的《微机原理与接口技术（第五版）》
-
-处理器
-计算集的运算和控制核心，即中央处理单元（CPU, Central Process Unit）
-微处理器(Micrprocessor):
-一块大规模集成电路芯片
-代表着整个微型机系统的性能
-_微型机_：采用微处理器为核心构造的计算机
-
-
-
-处理器性能参数
-字长：处理器每个时间单位可以处理的二进制数据位数
-时钟频率：表明处理器的处理速度，反映了处理器的基本时间单位
-集成度：表明处理器的生产工艺水平，通常用芯片上集成的晶体管数量来表达
-
-摩尔定律摩尔定律：每 18 个月，集成电路的性能将提高一倍，而其价格将降低一半
-处理器总线
-系统总线：
-用于多个部件相互连接、传递信息的公共通道
-任一时刻再总线上智能传送一种信息，但可以由多个部件在接收信息
-
-
-数据总线：
-是处理器与存储器或外设交换信息的通道
-其个数（条数）就是一次能够传送数据的二进制位数，通常等于处理器字长
-处理器的数据通过该组信号线输出到主存或外设，可以双向传输信号
-
-
-地址总线：
-用于指定存储器或外设的具体单元
-其个数反映处理器能够访问的主存储器容量或外设范围
-在 ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2021/06/08/yuque/%E7%AC%AC%E4%B8%89%E7%AB%A0%20%E6%95%B0%E6%8D%AE%E9%93%BE%E8%B7%AF%E5%B1%82/" title="第三章 数据链路层"><img class="post_bg" src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="第三章 数据链路层"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/06/08/yuque/%E7%AC%AC%E4%B8%89%E7%AB%A0%20%E6%95%B0%E6%8D%AE%E9%93%BE%E8%B7%AF%E5%B1%82/" title="第三章 数据链路层">第三章 数据链路层</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2021-06-08T02:14:29.000Z" title="Created 2021-06-08 10:14:29">2021-06-08</time></span></div><div class="content">信道分类：
-
-点对点信道：这种信道使用一对一的点对点通信方式
-广播信道：这种信道使用一对多的广播通信方式
-
-
-
-不同的链路层可能使用不同的数据链路层协议
-
-使用点对点的数据链路层
-链路：
-就是从一个结点到相邻结点的一段物理线路（有线或无线）
-链路只是一条路径的组成部分
-数据链路：
-当需要在一条线路上传送数据时，出了必须有一条物理线路外，还必须有一些的必要的通信协议来控制这些数据的传输
-一般的网络适配器都包括了数据链路层和物理层这两层的功能
-
-
-若把链路分为物理链路和逻辑链路：
-物理链路就是上面所说的链路
-逻辑链路就是上面的数据链路，即物理链路加上必要的通信协议
-
-
-
-
-帧：点对点信道的数据链路层的协议数据单元
-数据链路层把网络层交下来的数据构成帧发送到链路上，以及把接收到的帧中的数据取出并上交给网络层。
-网络层协议数据单元是IP 数据报（简称数据报、分组或包）
-
-
-
-
-点对点信道的数据链路层在进行通信时的主要步骤如下：
-
-结点 A 的数据链路层把网络层交下来的 IP 数据报添加首部和尾部封装成帧
-结点 A 把封装好的帧发送给结点 B 的数据链路层
-若结点 B 的数据链路层收到的帧无差错 ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2021/06/08/yuque/%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F%E6%B3%95/" title="选择排序法"><img class="post_bg" src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="选择排序法"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/06/08/yuque/%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F%E6%B3%95/" title="选择排序法">选择排序法</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2021-06-08T02:14:29.000Z" title="Created 2021-06-08 10:14:29">2021-06-08</time></span></div><div class="content">分析
-假设已经给定了一个无序数组，现在需要将其按照一定顺序排好。现在我们使用选择排序法，每次从数组中选出一个最大的元素并将其与数组最后一个元素交换位置，使数组最后一个元素变为最大的。
-
-
-随着排序的进行，每次需要检查的元素数在逐渐减少，最后一次需要检查的元素都只有一个。既然如此，运行时间怎么还是O(n2)呢？这个问题问得好，这与大 O 表示法中的常数相关。第 4 章将详细解释，这里只简单地说一说。
-你说得没错，并非每次都需要检查n个元素。第一次需要检查n个元素，但随后检查的元素数依次为n - 1, n – 2, …, 2 和 1。平均每次检查的元素数为 1&#x2F;2 × _n_，因此运行时间为O(n × 1&#x2F;2 × n)。但大 O 表示法省略诸如 1&#x2F;2 这样的常数（有关这方面的完整讨论，请参阅第 4 章），因此简单地写作O(n × n)或O(n2)。
-​ — 《算法图解》
-
-
-
-代码实现C 语言实现因为 C 中对数组的删除比较麻烦，所以我没有按照《算法图解》中的思路每次选择最小的元素，而是选择了最大的。
-1234567891011121314151617181 ...</div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/page/3/#content-inner"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/#content-inner">3</a><span class="page-number current">4</span></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://s2.loli.net/2022/04/18/lYMgAfU7uI9zCpV.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">一颗荔枝味的汤圆</div><div class="author-info__description"></div></div><div class="card-info-data is-center"><div class="card-info-data-item"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">37</div></a></div><div class="card-info-data-item"><a href="/tags/"><div class="headline">Tags</div><div class="length-num">0</div></a></div><div class="card-info-data-item"><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/mtics" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:lizhw.cs@outlook.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2022/04/20/hello-world/" title="Hello World"><img src="https://images.pexels.com/photos/3875821/pexels-photo-3875821.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Hello World"/></a><div class="content"><a class="title" href="/2022/04/20/hello-world/" title="Hello World">Hello World</a><time datetime="2022-04-20T01:04:15.978Z" title="Created 2022-04-20 09:04:15">2022-04-20</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/04/19/yuque/HELLO%20WORLD/" title="HELLO WORLD"><img src="https://images.pexels.com/photos/3875821/pexels-photo-3875821.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="HELLO WORLD"/></a><div class="content"><a class="title" href="/2022/04/19/yuque/HELLO%20WORLD/" title="HELLO WORLD">HELLO WORLD</a><time datetime="2022-04-19T10:10:31.000Z" title="Created 2022-04-19 18:10:31">2022-04-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/06/08/yuque/%E5%85%B3%E4%BA%8E%E6%88%91/" title="关于我"><img src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="关于我"/></a><div class="content"><a class="title" href="/2021/06/08/yuque/%E5%85%B3%E4%BA%8E%E6%88%91/" title="关于我">关于我</a><time datetime="2021-06-08T02:45:31.000Z" title="Created 2021-06-08 10:45:31">2021-06-08</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/06/08/yuque/2019%20Robocup%20%E8%B5%9B%E5%90%8E%E6%80%BB%E7%BB%93/" title="2019 Robocup 赛后总结"><img src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="2019 Robocup 赛后总结"/></a><div class="content"><a class="title" href="/2021/06/08/yuque/2019%20Robocup%20%E8%B5%9B%E5%90%8E%E6%80%BB%E7%BB%93/" title="2019 Robocup 赛后总结">2019 Robocup 赛后总结</a><time datetime="2021-06-08T02:14:29.000Z" title="Created 2021-06-08 10:14:29">2021-06-08</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/06/08/yuque/Faster-RCNN%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/" title="Faster-RCNN环境配置"><img src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Faster-RCNN环境配置"/></a><div class="content"><a class="title" href="/2021/06/08/yuque/Faster-RCNN%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/" title="Faster-RCNN环境配置">Faster-RCNN环境配置</a><time datetime="2021-06-08T02:14:29.000Z" title="Created 2021-06-08 10:14:29">2021-06-08</time></div></div></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>Archives</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/04/"><span class="card-archive-list-date">April 2022</span><span class="card-archive-list-count">2</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/06/"><span class="card-archive-list-date">June 2021</span><span class="card-archive-list-count">35</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>Info</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">Article :</div><div class="item-count">37</div></div><div class="webinfo-item"><div class="item-name">Run time :</div><div class="item-count" id="runtimeshow" data-publishDate="2020-07-18T04:18:10.000Z"></div></div><div class="webinfo-item"><div class="item-name">UV :</div><div class="item-count" id="busuanzi_value_site_uv"></div></div><div class="webinfo-item"><div class="item-name">PV :</div><div class="item-count" id="busuanzi_value_site_pv"></div></div><div class="webinfo-item"><div class="item-name">Last Push :</div><div class="item-count" id="last-push-date" data-lastPushDate="2022-04-20T01:05:10.077Z"></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2022 By 一颗荔枝味的汤圆</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="Switch Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between single-column and double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="Back To Top"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script><div class="js-pjax"></div><script id="canvas_nest" defer="defer" color="0,0,255" opacity="0.7" zIndex="-1" count="99" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/canvas-nest.min.js"></script><script id="click-show-text" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/click-show-text.min.js" data-mobile="false" data-text="嗯嗯,啊对对对,是的呢" data-fontsize="15px" data-random="false" async="async"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
+按照 Chrome 的版本下载 ChromeDriver，然后还需要将其安装到 Python 环境中。打开命令 ...</div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/page/3/#content-inner"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/#content-inner">3</a><span class="page-number current">4</span></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://s2.loli.net/2022/04/18/lYMgAfU7uI9zCpV.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">一颗荔枝味的汤圆</div><div class="author-info__description"></div></div><div class="card-info-data is-center"><div class="card-info-data-item"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">36</div></a></div><div class="card-info-data-item"><a href="/tags/"><div class="headline">Tags</div><div class="length-num">12</div></a></div><div class="card-info-data-item"><a href="/categories/"><div class="headline">Categories</div><div class="length-num">3</div></a></div></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/mtics" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:lizhw.cs@outlook.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2022/04/20/summary/" title="目录"><img src="https://images.pexels.com/photos/3875821/pexels-photo-3875821.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="目录"/></a><div class="content"><a class="title" href="/2022/04/20/summary/" title="目录">目录</a><time datetime="2022-04-20T02:24:40.000Z" title="Created 2022-04-20 10:24:40">2022-04-20</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/06/08/Courses/2017-11-25-binary-find/" title="二分查找法"><img src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="二分查找法"/></a><div class="content"><a class="title" href="/2021/06/08/Courses/2017-11-25-binary-find/" title="二分查找法">二分查找法</a><time datetime="2021-06-08T02:14:29.000Z" title="Created 2021-06-08 10:14:29">2021-06-08</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/06/08/Courses/2017-11-27-common-father/" title="求二叉树两结点最近的共同祖先结点"><img src="https://images.pexels.com/photos/3875821/pexels-photo-3875821.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="求二叉树两结点最近的共同祖先结点"/></a><div class="content"><a class="title" href="/2021/06/08/Courses/2017-11-27-common-father/" title="求二叉树两结点最近的共同祖先结点">求二叉树两结点最近的共同祖先结点</a><time datetime="2021-06-08T02:14:29.000Z" title="Created 2021-06-08 10:14:29">2021-06-08</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/06/08/Courses/2017-11-27-complete-binary-tree/" title="判断是否为完全二叉树"><img src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="判断是否为完全二叉树"/></a><div class="content"><a class="title" href="/2021/06/08/Courses/2017-11-27-complete-binary-tree/" title="判断是否为完全二叉树">判断是否为完全二叉树</a><time datetime="2021-06-08T02:14:29.000Z" title="Created 2021-06-08 10:14:29">2021-06-08</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/06/08/Courses/2017-12-02-sort/" title="选择排序法"><img src="https://images.pexels.com/photos/3875821/pexels-photo-3875821.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="选择排序法"/></a><div class="content"><a class="title" href="/2021/06/08/Courses/2017-12-02-sort/" title="选择排序法">选择排序法</a><time datetime="2021-06-08T02:14:29.000Z" title="Created 2021-06-08 10:14:29">2021-06-08</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
+            <i class="fas fa-folder-open"></i>
+            <span>Categories</span>
+            
+            </div>
+            <ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Courses/"><span class="card-category-list-name">Courses</span><span class="card-category-list-count">11</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Essays/"><span class="card-category-list-name">Essays</span><span class="card-category-list-count">5</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Techniques/"><span class="card-category-list-name">Techniques</span><span class="card-category-list-count">19</span></a></li>
+            </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>Tags</span></div><div class="card-tag-cloud"><a href="/tags/Computer-Network/" style="font-size: 1.17em; color: #999c9f">Computer Network</a> <a href="/tags/Computers-and-Digital-Systems/" style="font-size: 1.17em; color: #999c9f">Computers and Digital Systems</a> <a href="/tags/Data-Structure-and-Agorithms/" style="font-size: 1.37em; color: #99a4b2">Data Structure and Agorithms</a> <a href="/tags/Deep-Learning/" style="font-size: 1.23em; color: #999ea6">Deep Learning</a> <a href="/tags/Gamify/" style="font-size: 1.1em; color: #999">Gamify</a> <a href="/tags/Github/" style="font-size: 1.1em; color: #999">Github</a> <a href="/tags/Hexo/" style="font-size: 1.1em; color: #999">Hexo</a> <a href="/tags/Java/" style="font-size: 1.1em; color: #999">Java</a> <a href="/tags/Life/" style="font-size: 1.3em; color: #99a1ac">Life</a> <a href="/tags/Machine-Learning/" style="font-size: 1.23em; color: #999ea6">Machine Learning</a> <a href="/tags/NAO/" style="font-size: 1.43em; color: #99a6b9">NAO</a> <a href="/tags/Python/" style="font-size: 1.5em; color: #99a9bf">Python</a></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>Archives</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/04/"><span class="card-archive-list-date">April 2022</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/06/"><span class="card-archive-list-date">June 2021</span><span class="card-archive-list-count">35</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>Info</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">Article :</div><div class="item-count">36</div></div><div class="webinfo-item"><div class="item-name">Run time :</div><div class="item-count" id="runtimeshow" data-publishDate="2020-07-18T04:18:10.000Z"></div></div><div class="webinfo-item"><div class="item-name">UV :</div><div class="item-count" id="busuanzi_value_site_uv"></div></div><div class="webinfo-item"><div class="item-name">PV :</div><div class="item-count" id="busuanzi_value_site_pv"></div></div><div class="webinfo-item"><div class="item-name">Last Push :</div><div class="item-count" id="last-push-date" data-lastPushDate="2022-04-20T02:40:18.873Z"></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2022 By 一颗荔枝味的汤圆</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="Switch Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between single-column and double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="Back To Top"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script><div class="js-pjax"></div><script id="canvas_nest" defer="defer" color="0,0,255" opacity="0.7" zIndex="-1" count="99" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/canvas-nest.min.js"></script><script id="click-show-text" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/click-show-text.min.js" data-mobile="false" data-text="嗯嗯,啊对对对,是的呢" data-fontsize="15px" data-random="false" async="async"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
