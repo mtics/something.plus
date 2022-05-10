@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>《微机原理与接口技术（第五版）》第一章 - 浪漫生活手册</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="浪漫生活手册"><meta name="msapplication-TileImage" content="/uploads/logo.png"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="浪漫生活手册"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="第一章 本总结笔记基于钱晓捷老师的《微机原理与接口技术（第五版）》  处理器 计算集的运算和控制核心，即中央处理单元（CPU, Central Process Unit） 微处理器(Micrprocessor): 一块大规模集成电路芯片 代表着整个微型机系统的性能 _微型机_：采用微处理器为核心构造的计算机    处理器性能参数 字长：处理器每个时间单位可以处理的二进制数据位数 时钟频率：表明处理"><meta property="og:type" content="blog"><meta property="og:title" content="《微机原理与接口技术（第五版）》第一章"><meta property="og:url" content="https://something.plus/2021/06/08/Courses/2019-05-29-the-principle-of-microcomputer-chp1/"><meta property="og:site_name" content="浪漫生活手册"><meta property="og:description" content="第一章 本总结笔记基于钱晓捷老师的《微机原理与接口技术（第五版）》  处理器 计算集的运算和控制核心，即中央处理单元（CPU, Central Process Unit） 微处理器(Micrprocessor): 一块大规模集成电路芯片 代表着整个微型机系统的性能 _微型机_：采用微处理器为核心构造的计算机    处理器性能参数 字长：处理器每个时间单位可以处理的二进制数据位数 时钟频率：表明处理"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="http://storage.qiniu.aspi.tech/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%B1%82%E6%AC%A1%E7%BB%93%E6%9E%84.png"><meta property="article:published_time" content="2021-06-08T02:14:29.000Z"><meta property="article:modified_time" content="2022-05-10T11:48:37.610Z"><meta property="article:author" content="一颗荔枝味的汤圆"><meta property="article:tag" content="Computers and Digital Systems"><meta property="twitter:card" content="summary"><meta property="twitter:image" content="http://storage.qiniu.aspi.tech/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%B1%82%E6%AC%A1%E7%BB%93%E6%9E%84.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://something.plus/2021/06/08/Courses/2019-05-29-the-principle-of-microcomputer-chp1/"},"headline":"《微机原理与接口技术（第五版）》第一章","image":["http://storage.qiniu.aspi.tech/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%B1%82%E6%AC%A1%E7%BB%93%E6%9E%84.png"],"datePublished":"2021-06-08T02:14:29.000Z","dateModified":"2022-05-10T11:48:37.610Z","author":{"@type":"Person","name":"一颗荔枝味的汤圆"},"publisher":{"@type":"Organization","name":"浪漫生活手册","logo":{"@type":"ImageObject","url":"https://something.plus/uploads/logo.png"}},"description":"第一章 本总结笔记基于钱晓捷老师的《微机原理与接口技术（第五版）》  处理器 计算集的运算和控制核心，即中央处理单元（CPU, Central Process Unit） 微处理器(Micrprocessor): 一块大规模集成电路芯片 代表着整个微型机系统的性能 _微型机_：采用微处理器为核心构造的计算机    处理器性能参数 字长：处理器每个时间单位可以处理的二进制数据位数 时钟频率：表明处理"}</script><link rel="canonical" href="https://something.plus/2021/06/08/Courses/2019-05-29-the-principle-of-microcomputer-chp1/"><link rel="alternate" href="/atom.xml" title="浪漫生活手册" type="application/atom+xml"><link rel="icon" href="/uploads/logo.png"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><script>var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?9e4058df3c51c54f82c8cfb85936bb96";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();</script><!--!--><script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" defer></script><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><script src="https://www.googletagmanager.com/gtag/js?id=G-QRP6K8BZ2Y" async></script><script>window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+    
+        gtag('config', 'G-QRP6K8BZ2Y');</script><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!--!--><!--!--><meta name="generator" content="Hexo 6.1.0"></head><body class="is-3-column"><nav class="navbar navbar-main"><div class="container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/uploads/logo.png" alt="浪漫生活手册" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Follow Me on GitHub" href="https://github.com/mtics"><i class="fab fa-github"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-6-widescreen"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2021-06-08T02:14:29.000Z" title="6/8/2021, 10:14:29 AM">2021-06-08</time>发表</span><span class="level-item"><time dateTime="2022-05-10T11:48:37.610Z" title="5/10/2022, 7:48:37 PM">2022-05-10</time>更新</span><span class="level-item"><a class="link-muted" href="/categories/Courses/">Courses</a></span><span class="level-item">13 分钟读完 (大约1899个字)</span><span class="level-item" id="busuanzi_container_page_pv"><span id="busuanzi_value_page_pv">0</span>次访问</span></div></div><h1 class="title is-3 is-size-4-mobile">《微机原理与接口技术（第五版）》第一章</h1><div class="content"><h1 id="第一章"><a href="#第一章" class="headerlink" title="第一章"></a>第一章</h1><blockquote>
+<p>本总结笔记基于钱晓捷老师的《微机原理与接口技术（第五版）》</p>
+</blockquote>
+<h2 id="处理器"><a href="#处理器" class="headerlink" title="处理器"></a>处理器</h2><ul>
+<li>计算集的运算和控制核心，即<em>中央处理单元</em>（CPU, Central Process Unit）</li>
+<li><em>微处理器</em>(Micrprocessor):<ul>
+<li>一块大规模集成电路芯片</li>
+<li>代表着整个微型机系统的性能</li>
+<li>_微型机_：采用微处理器为核心构造的计算机</li>
+</ul>
+</li>
+</ul>
+<h2 id="处理器性能参数"><a href="#处理器性能参数" class="headerlink" title="处理器性能参数"></a>处理器性能参数</h2><ul>
+<li><strong>字长</strong>：处理器每个时间单位可以处理的二进制数据位数</li>
+<li><strong>时钟频率</strong>：表明处理器的处理速度，反映了处理器的基本时间单位</li>
+<li><strong>集成度</strong>：表明处理器的生产工艺水平，通常用芯片上集成的晶体管数量来表达</li>
+</ul>
+<h2 id="摩尔定律"><a href="#摩尔定律" class="headerlink" title="摩尔定律"></a>摩尔定律</h2><p><strong>摩尔定律</strong>：每 18 个月，集成电路的性能将提高一倍，而其价格将降低一半</p>
+<h2 id="处理器总线"><a href="#处理器总线" class="headerlink" title="处理器总线"></a>处理器总线</h2><ul>
+<li><strong>系统总线</strong>：<ul>
+<li>用于多个部件相互连接、传递信息的公共通道</li>
+<li>任一时刻再总线上智能传送一种信息，但可以由多个部件在接收信息</li>
+</ul>
+</li>
+<li><strong>数据总线</strong>：<ul>
+<li>是处理器与存储器或外设交换信息的通道</li>
+<li>其个数（条数）就是一次能够传送数据的二进制位数，通常<em>等于处理器字长</em></li>
+<li>处理器的数据通过该组信号线输出到主存或外设，可以<em>双向传输</em>信号</li>
+</ul>
+</li>
+<li><strong>地址总线</strong>：<ul>
+<li>用于指定存储器或外设的具体单元</li>
+<li>其个数反映处理器能够访问的主存储器容量或外设范围</li>
+<li>在该组信号线上，处理器<em>单向输出</em>将要访问的主存单元或 I&#x2F;O 端口的地址信息</li>
+</ul>
+</li>
+<li><strong>控制总线</strong>：<ul>
+<li>用于协调系统中各部件的操作</li>
+<li>控制总线决定了总线的功能强弱、适应性的好坏</li>
+<li>各类总线的特点主要取决于其控制总线</li>
+</ul>
+</li>
+</ul>
+<h2 id="80x86-系列处理器"><a href="#80x86-系列处理器" class="headerlink" title="80x86 系列处理器"></a>80x86 系列处理器</h2><ul>
+<li>_8086_：<ul>
+<li>主存容量为 2^20 B &#x3D; 1 MB</li>
+</ul>
+</li>
+<li><em>80286</em>:<ul>
+<li>主存容量为 2^32 B &#x3D; 4 GB</li>
+</ul>
+</li>
+</ul>
+<h2 id="冯·诺伊曼计算机的基本思想"><a href="#冯·诺伊曼计算机的基本思想" class="headerlink" title="冯·诺伊曼计算机的基本思想"></a>冯·诺伊曼计算机的基本思想</h2><ul>
+<li>采用<em>二进制</em>形式表示数据和指令，指令由<em>操作码</em>和<em>地址码</em>组成<ul>
+<li>指令是控制计算机操作的命令，是处理器不需要翻译就能识别（直接执行）的“母语”，即机器语言</li>
+<li>程序是由指令构成的</li>
+<li>指令的操作码表明指令的操作</li>
+<li><em>操作数</em>是参与操作的数据，主要以寄存器或存储器地址形式指明数据的来源，所以也称<strong>地址码</strong></li>
+</ul>
+</li>
+<li>“<strong>存储程序</strong>”、“<strong>程序控制</strong>”<ul>
+<li>存储程序：把指令以代码的形式事先输入到计算机的主存储器中，这些指令按一定的规则组成程序</li>
+<li>程序控制：当计算机启动后，程序会控制计算机按规定的顺序逐条执行指令，自动完成预定的信息处理任务</li>
+</ul>
+</li>
+<li>指令的执行是<em>顺序</em>的，即一般按照指令再存储器中存放的顺序执行，程序分支由转移指令实现</li>
+<li>计算机由<em>存储器、运算器、控制器、输入设备和输出设备</em>5 大基本部件组成。</li>
+</ul>
+<p>数字计算机中信息的最基本单位就是<em>二进制位</em>，或称<em>比特位</em>。</p>
+<ul>
+<li>半字节：4 个二进制位</li>
+<li>一字节：8 个二进制位</li>
+<li>字：16 位</li>
+<li>双字：32 位</li>
+<li>四字：64 位</li>
+</ul>
+<h2 id="处理器的主要功能"><a href="#处理器的主要功能" class="headerlink" title="处理器的主要功能"></a>处理器的主要功能</h2><ul>
+<li><strong>取指</strong>：从主存储器读取指令</li>
+<li><strong>译码</strong>：翻译指令代码的功能</li>
+<li><strong>执行</strong>：执行指令所规定的操作</li>
+</ul>
+<h2 id="存储器"><a href="#存储器" class="headerlink" title="存储器"></a>存储器</h2><ul>
+<li>存储器：用来存放程序和数据的部件</li>
+<li>_主存储器_：<ul>
+<li>造价高、速度快、容量小</li>
+<li>用来存放当前正在运行的程序和正待处理的数据</li>
+</ul>
+</li>
+<li>_辅助存储器_（简称<em>辅存</em>或<em>外存</em>）:<ul>
+<li>造价低、容量大、信息可长期保存、速度慢</li>
+<li>主要用来长久保存程序和数据</li>
+</ul>
+</li>
+</ul>
+<h2 id="计算机系统的层次结构"><a href="#计算机系统的层次结构" class="headerlink" title="计算机系统的层次结构"></a>计算机系统的层次结构</h2><p><img src="http://storage.qiniu.aspi.tech/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%B1%82%E6%AC%A1%E7%BB%93%E6%9E%84.png" alt="计算机系统的层次结构"></p>
+<ul>
+<li>_用户层_：<ul>
+<li>是计算机用户看到的计算机</li>
+<li>呈现给用户的是可执行程序和数据文件</li>
+</ul>
+</li>
+<li>_高级语言层_：<ul>
+<li>面向软件程序员</li>
+</ul>
+</li>
+<li>_汇编语言层_：<ul>
+<li>面向系统程序员</li>
+<li>汇编语言程序员需要利用操作系统提供的功能，掌握指令系统，理解主存储器的组织</li>
+</ul>
+</li>
+<li>_操作系统层_：<ul>
+<li>操作系统是最主要的系统程序，也称为系统软件层</li>
+</ul>
+</li>
+<li>_机器语言层_：<ul>
+<li>由处理器直接识别的指令组成，面向系统结构设计师</li>
+<li>该层具有承上启下的功能。一方面为上层软件提供硬件指令支持，另一方面是下层硬件实现的目标</li>
+</ul>
+</li>
+<li>_控制层_：<ul>
+<li>面向硬件设计师</li>
+<li>这一层由微程序实现，也可以由硬布线实现</li>
+</ul>
+</li>
+<li>_数字电路层_：<ul>
+<li>是计算机的具体物理实现</li>
+</ul>
+</li>
+</ul>
+<h2 id="软件与硬件的等价性原理"><a href="#软件与硬件的等价性原理" class="headerlink" title="软件与硬件的等价性原理"></a>软件与硬件的等价性原理</h2><ul>
+<li>原则上说，任何一个由软件所完成的操作也可以直接由硬件来实现，任何一条由硬件所执行的指令也能用软件来完成。</li>
+<li>软件与硬件的等价性原理是指<em>软硬件在逻辑功能上的等价</em>，并<em>不意味</em>着在现实中性能和成本的等价。<ul>
+<li>软件易于实现各种逻辑和运算功能，但是往往速度较慢，甚至不能满足时间要求</li>
+<li>硬件则可以高速实现逻辑和运算功能，但是难以实现复杂功能或计算，甚至无法实现</li>
+</ul>
+</li>
+</ul>
+<h2 id="计算机的结构、组成与实现"><a href="#计算机的结构、组成与实现" class="headerlink" title="计算机的结构、组成与实现"></a>计算机的结构、组成与实现</h2><ul>
+<li><strong>计算机结构</strong>：<ul>
+<li>计算机结构是指为机器编写正确的（时间无关的）程序、机器语言程序员必须理解的一种结构。</li>
+<li><strong>指令集结构</strong>：<ul>
+<li>计算机结构的经典定义确定了计算机系统中软件和硬件的接口，即<em>指令集结构</em></li>
+<li>它包括指令集（指令系统）、指令格式、数据类型、寄存器、寻址方式、主存访问方式和 I&#x2F;O 机制等</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>计算机组成</strong>：<ul>
+<li>也称为<em>计算机组织</em>，是计算机结构的逻辑实现（逻辑设计），对应计算机层次结构的控制层。</li>
+</ul>
+</li>
+<li><strong>计算机实现</strong>：<ul>
+<li>是计算机组成物理实现，对应<em>数字电路层</em></li>
+</ul>
+</li>
+</ul>
+<h2 id="软件兼容与系列机和兼容机"><a href="#软件兼容与系列机和兼容机" class="headerlink" title="软件兼容与系列机和兼容机"></a>软件兼容与系列机和兼容机</h2><ul>
+<li><strong>软件兼容</strong>：指<em>同一个厂家</em>生产的具有<em>相同计算机结构</em>，但具有<em>不同组成和实现</em>的一系列不同档次、不同型号的机器。</li>
+<li><strong>兼容机</strong>：指<em>不同厂家</em>生产的具有<em>相同计算机结构</em>（_不同的组成和实现_）的计算机</li>
+<li>为了保证软件的<strong>向上向下、向前向后兼容</strong>，系列机和兼容机必须保持结构不变，但这又限制了计算机结构的发展</li>
+</ul>
+</div><div class="article-licensing box"><div class="licensing-title"><p>《微机原理与接口技术（第五版）》第一章</p><p><a href="https://something.plus/2021/06/08/Courses/2019-05-29-the-principle-of-microcomputer-chp1/">https://something.plus/2021/06/08/Courses/2019-05-29-the-principle-of-microcomputer-chp1/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>作者</h6><p>一颗荔枝味的汤圆</p></div></div><div class="level-item is-narrow"><div><h6>发布于</h6><p>2021-06-08</p></div></div><div class="level-item is-narrow"><div><h6>更新于</h6><p>2022-05-10</p></div></div><div class="level-item is-narrow"><div><h6>许可协议</h6><p><a class="icons" rel="noopener" target="_blank" title="Creative Commons" href="https://creativecommons.org/"><i class="icon fab fa-creative-commons"></i></a><a class="icons" rel="noopener" target="_blank" title="Attribution" href="https://creativecommons.org/licenses/by/4.0/"><i class="icon fab fa-creative-commons-by"></i></a><a class="icons" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="icon fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/Computers-and-Digital-Systems/">Computers and Digital Systems</a></div><!--!--></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/2021/06/08/Courses/2019-03-24-computer-network-chp2/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">物理层</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2021/06/08/Courses/2019-06-09-computer-network-chp3/"><span class="level-item">数据链路层</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><!--!--></div><div class="column column-left is-4-tablet is-4-desktop is-3-widescreen  order-1"><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar is-rounded" src="/uploads/avatar.jpg" alt="一颗荔枝味汤圆"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">一颗荔枝味汤圆</p><p class="is-size-6 is-block">来日方长噻~</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>Shanghai, China</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">文章</p><a href="/archives"><p class="title">35</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">分类</p><a href="/categories"><p class="title">3</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">标签</p><a href="/tags"><p class="title">12</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://github.com/mtics" target="_blank" rel="noopener">关注我</a></div><div class="level is-mobile is-multiline"><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Github" href="https://github.com/mtics"><i class="fab fa-github"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="RSS" href="/atom.xml"><i class="fas fa-rss"></i></a></div></div></div><!--!--><div class="card widget" data-type="links"><div class="card-content"><div class="menu"><h3 class="menu-label">链接</h3><ul class="menu-list"><li><a class="level is-mobile" href="https://hexo.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Hexo</span></span><span class="level-right"><span class="level-item tag">hexo.io</span></span></a></li><li><a class="level is-mobile" href="https://bulma.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Bulma</span></span><span class="level-right"><span class="level-item tag">bulma.io</span></span></a></li></ul></div></div></div><div class="column-right-shadow is-hidden-widescreen"></div></div><div class="column column-right is-4-tablet is-4-desktop is-3-widescreen is-hidden-touch is-hidden-desktop-only order-3"><div class="card widget" data-type="categories"><div class="card-content"><div class="menu"><h3 class="menu-label">分类</h3><ul class="menu-list"><li><a class="level is-mobile" href="/categories/Courses/"><span class="level-start"><span class="level-item">Courses</span></span><span class="level-end"><span class="level-item tag">11</span></span></a></li><li><a class="level is-mobile" href="/categories/Essays/"><span class="level-start"><span class="level-item">Essays</span></span><span class="level-end"><span class="level-item tag">5</span></span></a></li><li><a class="level is-mobile" href="/categories/Techniques/"><span class="level-start"><span class="level-item">Techniques</span></span><span class="level-end"><span class="level-item tag">19</span></span></a></li></ul></div></div></div><div class="card widget" data-type="recent-posts"><div class="card-content"><h3 class="menu-label">最新文章</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-06-08T02:14:29.000Z">2021-06-08</time></p><p class="title"><a href="/2021/06/08/Courses/2017-12-02-sort/">选择排序法</a></p><p class="categories"><a href="/categories/Courses/">Courses</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-06-08T02:14:29.000Z">2021-06-08</time></p><p class="title"><a href="/2021/06/08/Courses/2017-12-17-basic-operation-of-graph/">图的基本操作</a></p><p class="categories"><a href="/categories/Courses/">Courses</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-06-08T02:14:29.000Z">2021-06-08</time></p><p class="title"><a href="/2021/06/08/Courses/2017-12-17-bfs/">图的广度优先遍历</a></p><p class="categories"><a href="/categories/Courses/">Courses</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-06-08T02:14:29.000Z">2021-06-08</time></p><p class="title"><a href="/2021/06/08/Courses/2017-12-17-dfs/">图的深度优先遍历</a></p><p class="categories"><a href="/categories/Courses/">Courses</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2021-06-08T02:14:29.000Z">2021-06-08</time></p><p class="title"><a href="/2021/06/08/Courses/2019-03-17-computer-network-chp-1/">电路交换与分组交换</a></p><p class="categories"><a href="/categories/Courses/">Courses</a></p></div></article></div></div><div class="card widget" data-type="archives"><div class="card-content"><div class="menu"><h3 class="menu-label">归档</h3><ul class="menu-list"><li><a class="level is-mobile" href="/archives/2021/06/"><span class="level-start"><span class="level-item">六月 2021</span></span><span class="level-end"><span class="level-item tag">35</span></span></a></li></ul></div></div></div><div class="card widget" data-type="tags"><div class="card-content"><div class="menu"><h3 class="menu-label">标签</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/Computer-Network/"><span class="tag">Computer Network</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Computers-and-Digital-Systems/"><span class="tag">Computers and Digital Systems</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Data-Structure-and-Agorithms/"><span class="tag">Data Structure and Agorithms</span><span class="tag">7</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Deep-Learning/"><span class="tag">Deep Learning</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Gamify/"><span class="tag">Gamify</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Github/"><span class="tag">Github</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Hexo/"><span class="tag">Hexo</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Java/"><span class="tag">Java</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Life/"><span class="tag">Life</span><span class="tag">5</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Machine-Learning/"><span class="tag">Machine Learning</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/NAO/"><span class="tag">NAO</span><span class="tag">8</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Python/"><span class="tag">Python</span><span class="tag">12</span></a></div></div></div></div></div></div></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/uploads/logo.png" alt="浪漫生活手册" height="28"></a><p class="is-size-7"><span>&copy; 2022 一颗荔枝味的汤圆</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a><br><span id="busuanzi_container_site_uv">共<span id="busuanzi_value_site_uv">0</span>个访客</span></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Follow Me On Github" href="https://github.com/mtics"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zh-CN");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="回到顶端" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.js" defer></script><script>window.addEventListener("load", () => {
+      window.cookieconsent.initialise({
+        type: "info",
+        theme: "edgeless",
+        static: false,
+        position: "bottom-left",
+        content: {
+          message: "此网站使用Cookie来改善您的体验。",
+          dismiss: "知道了！",
+          allow: "允许使用Cookie",
+          deny: "拒绝",
+          link: "了解更多",
+          policy: "Cookie政策",
+          href: "https://www.cookiesandyou.com/",
+        },
+        palette: {
+          popup: {
+            background: "#edeff5",
+            text: "#838391"
+          },
+          button: {
+            background: "#4b81e8"
+          },
+        },
+      });
+    });</script><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><script type="text/x-mathjax-config">MathJax.Hub.Config({
+            'HTML-CSS': {
+                matchFontHeight: false
+            },
+            SVG: {
+                matchFontHeight: false
+            },
+            CommonHTML: {
+                matchFontHeight: false
+            },
+            tex2jax: {
+                inlineMath: [
+                    ['$','$'],
+                    ['\\(','\\)']
+                ]
+            }
+        });</script><script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.9/unpacked/MathJax.js?config=TeX-MML-AM_CHTML" defer></script><!--!--><!--!--><!--!--><script src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="想要查找什么..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"想要查找什么...","untitled":"(无标题)","posts":"文章","pages":"页面","categories":"分类","tags":"标签"});
+        });</script></body></html>
