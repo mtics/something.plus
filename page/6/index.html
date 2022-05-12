@@ -9,41 +9,7 @@
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
     
-        gtag('config', 'G-QRP6K8BZ2Y');</script><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!--!--><!--!--><meta name="generator" content="Hexo 6.1.0"></head><body class="is-3-column"><script type="text/javascript" src="/js/night.js"></script><canvas id="universe"></canvas><nav class="navbar navbar-main"><div class="container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img class="logo-img" src="/uploads/something.plus.3.svg" alt="浪漫生活手册" height="28"><img class="logo-img-dark" src="/uploads/something.plus.dark.png" alt="浪漫生活手册" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Follow Me on GitHub" href="https://github.com/mtics"><i class="fab fa-github"></i></a><a class="navbar-item night" id="night-nav" title="Night Mode" href="javascript:;"><i class="fas fa-moon" id="night-icon"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-6-widescreen"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2021-06-08T02:14:29.000Z" title="6/8/2021, 10:14:29 AM">2021-06-08</time>发表</span><span class="level-item"><time dateTime="2022-05-12T12:25:37.116Z" title="5/12/2022, 8:25:37 PM">2022-05-12</time>更新</span><span class="level-item"><a class="link-muted" href="/categories/Techniques/">Techniques</a></span><span class="level-item">5 分钟读完 (大约768个字)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2021/06/08/Techniques/2018-08-03-install-ros/">NAO学习——ROS的安装</a></h1><div class="content"><h1 id="Nao-学习——ROS-的安装"><a href="#Nao-学习——ROS-的安装" class="headerlink" title="Nao 学习——ROS 的安装"></a>Nao 学习——ROS 的安装</h1><p>搬运自<a target="_blank" rel="noopener" href="http://wiki.ros.org/cn/kinetic/Installation/Ubuntu">在 Ubuntu 中安装 ROS Kinetic</a></p>
-<h2 id="1-安装"><a href="#1-安装" class="headerlink" title="1. 安装"></a>1. 安装</h2><pre><code>ROS Kinetic 只 支持Wily (Ubuntu 15.10), Xenial (Ubuntu 16.04) 和Jessie (Debian 8) 的debian包。
-</code></pre>
-<h3 id="1-1-配置-Ubuntu-软件仓库"><a href="#1-1-配置-Ubuntu-软件仓库" class="headerlink" title="1.1 配置 Ubuntu 软件仓库"></a>1.1 配置 Ubuntu 软件仓库</h3><pre><code>配置你Ubuntu 软件仓库(repositories) 以允许 &quot;restricted&quot;、&quot;universe&quot; 和 &quot;multiverse&quot;这三种安装模式
-</code></pre>
-<h3 id="1-2-添加-sources-list"><a href="#1-2-添加-sources-list" class="headerlink" title="1.2 添加 sources.list"></a>1.2 添加 sources.list</h3><p><code> sudo sh -c &#39;echo &quot;deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main&quot; &gt; /etc/apt/sources.list.d/ros-latest.list&#39;</code></p>
-<p><strong>注：</strong>强烈建议使用国内或者新加波的镜像源，这样能够大大提高安装下载速度。</p>
-<h3 id="1-3-添加-keys"><a href="#1-3-添加-keys" class="headerlink" title="1.3 添加 keys"></a>1.3 添加 keys</h3><p><code> sudo apt-key adv --keyserver hkp://ha.pool.sks-keyservers.net:80 --recv-key 421C365BD9FF1F717815A3895523BAEEB01FA116</code></p>
-<h3 id="1-4-安装"><a href="#1-4-安装" class="headerlink" title="1.4 安装"></a>1.4 安装</h3><p>首先，确保你的 Debian 软件包索引是最新的：<br><code>sudo apt-get update</code><br>在 ROS 中，有很多不同的库和工具，官方提供了四种默认的配置：</p>
-<ul>
-<li><p><strong>桌面完整版: (推荐</strong>) : 包含 ROS、rqt、rviz、机器人通用库、2D&#x2F;3D 模拟器、导航以及 2D&#x2F;3D 感知<br><code> sudo apt-get install ros-kinetic-desktop-full</code></p>
-</li>
-<li><p><strong>桌面版安装</strong>: 包含 ROS、rqt、rviz 以及通用机器人函数库。<br><code>sudo apt-get install ros-kinetic-desktop</code></p>
-</li>
-<li><p>** 基础版安装: (简版**) 包含 ROS 核心软件包、构建工具以及通信相关的程序库，无 GUI 工具。<br><code>sudo apt-get install ros-kinetic-ros-base</code></p>
-</li>
-<li><p><strong>单个软件包安装</strong>: 你也可以安装某个指定的 ROS 软件包（使用软件包名称替换掉下面的 PACKAGE）:<br><code>sudo apt-get install ros-kinetic-PACKAGE</code></p>
-</li>
-</ul>
-<p>要查找可用软件包，请运行：<code>apt-cache search ros-kinetic</code></p>
-<h3 id="1-5-初始化-rosdep"><a href="#1-5-初始化-rosdep" class="headerlink" title="1.5 初始化 rosdep"></a>1.5 初始化 rosdep</h3><p>在开始使用 ROS 之前你还需要初始化 rosdep。rosdep 可以方便在你需要编译某些源码的时候为其安装一些系统依赖，同时也是某些 ROS 核心功能组件所必需用到的工具。</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo rosdep init</span><br><span class="line">rosdep update</span><br></pre></td></tr></table></figure>
-
-<h3 id="1-6-环境配置"><a href="#1-6-环境配置" class="headerlink" title="1.6 环境配置"></a>1.6 环境配置</h3><p>如果每次打开一个新的终端时 ROS 环境变量都能够自动配置好（即添加到 bash 会话中），那将会方便很多：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">echo &quot;source /opt/ros/kinetic/setup.bash&quot; &gt;&gt; ~/.bashrc</span><br><span class="line">source ~/.bashrc</span><br></pre></td></tr></table></figure>
-
-<p>如果你安装有多个 ROS 版本, ~&#x2F;.bashrc 必须只能 source 你当前使用版本所对应的 setup.bash。<br>如果你只想改变当前终端下的环境变量，可以执行以下命令：</p>
-<p><code>source /opt/ros/kinetic/setup.bash</code></p>
-<p>如果你使用 zsh，替换其中的 bash， 可以用以下命令来设置 shell:</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">echo &quot;source /opt/ros/kinetic/setup.zsh&quot; &gt;&gt; ~/.zshrc</span><br><span class="line">source ~/.zshrc</span><br></pre></td></tr></table></figure>
-
-<h3 id="1-7-构建工厂依赖"><a href="#1-7-构建工厂依赖" class="headerlink" title="1.7 构建工厂依赖"></a>1.7 构建工厂依赖</h3><p>到目前为止，已经安装了运行核心 ROS 包所需的内容。为了创建和管理自己的 ROS 工作区，有各种各样的工具和需求分别分布。例如：rosinstall 是一个经常使用的命令行工具，它使你能够轻松地从一个命令下载许多 ROS 包的源树。</p>
-<p>要安装这个工具和其他构建 ROS 包的依赖项，请运行:</p>
-<p><code>sudo apt-get install python-rosinstall python-rosinstall-generator python-wstool build-essential</code></p>
-</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2021-06-08T02:14:29.000Z" title="6/8/2021, 10:14:29 AM">2021-06-08</time>发表</span><span class="level-item"><time dateTime="2022-05-12T12:25:37.116Z" title="5/12/2022, 8:25:37 PM">2022-05-12</time>更新</span><span class="level-item"><a class="link-muted" href="/categories/Techniques/">Techniques</a></span><span class="level-item">8 分钟读完 (大约1128个字)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2021/06/08/Techniques/2018-08-07-run-naoqi-on-ros/">NAO学习——从NAOqi和rviz开始学习在ROS上运行NAO</a></h1><div class="content"><h1 id="NAO-学习——从-NAOqi-和-rviz-开始学习在-ROS-上运行-NAO"><a href="#NAO-学习——从-NAOqi-和-rviz-开始学习在-ROS-上运行-NAO" class="headerlink" title="NAO 学习——从 NAOqi 和 rviz 开始学习在 ROS 上运行 NAO"></a>NAO 学习——从 NAOqi 和 rviz 开始学习在 ROS 上运行 NAO</h1><h2 id="1-开始连接一个实体-NAO"><a href="#1-开始连接一个实体-NAO" class="headerlink" title="1. 开始连接一个实体 NAO"></a>1. 开始连接一个实体 NAO</h2><h3 id="1-1-运行-nao-bringup"><a href="#1-1-运行-nao-bringup" class="headerlink" title="1.1 运行 nao_bringup"></a>1.1 运行 nao_bringup</h3><p>在开始之前，我们首先要确定三个必须的依赖包 <em>naoqi_driver_，_naoqi_bridge</em> 和 <em>nao_description</em> 是否满足。这三个包可以通过包管理器或者从 github 上 clone。</p>
+        gtag('config', 'G-QRP6K8BZ2Y');</script><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!--!--><!--!--><meta name="generator" content="Hexo 6.1.0"></head><body class="is-3-column"><script type="text/javascript" src="/js/night.js"></script><canvas id="universe"></canvas><nav class="navbar navbar-main"><div class="container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img class="logo-img" src="/uploads/something.plus.3.svg" alt="浪漫生活手册" height="28"><img class="logo-img-dark" src="/uploads/something.plus.dark.png" alt="浪漫生活手册" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Follow Me on GitHub" href="https://github.com/mtics"><i class="fab fa-github"></i></a><a class="navbar-item night" id="night-nav" title="Night Mode" href="javascript:;"><i class="fas fa-moon" id="night-icon"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-6-widescreen"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2021-06-08T02:14:29.000Z" title="6/8/2021, 10:14:29 AM">2021-06-08</time>发表</span><span class="level-item"><time dateTime="2022-05-12T12:35:29.300Z" title="5/12/2022, 8:35:29 PM">2022-05-12</time>更新</span><span class="level-item"><a class="link-muted" href="/categories/Techniques/">Techniques</a></span><span class="level-item">8 分钟读完 (大约1128个字)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2021/06/08/Techniques/2018-08-07-run-naoqi-on-ros/">NAO学习——从NAOqi和rviz开始学习在ROS上运行NAO</a></h1><div class="content"><h1 id="NAO-学习——从-NAOqi-和-rviz-开始学习在-ROS-上运行-NAO"><a href="#NAO-学习——从-NAOqi-和-rviz-开始学习在-ROS-上运行-NAO" class="headerlink" title="NAO 学习——从 NAOqi 和 rviz 开始学习在 ROS 上运行 NAO"></a>NAO 学习——从 NAOqi 和 rviz 开始学习在 ROS 上运行 NAO</h1><h2 id="1-开始连接一个实体-NAO"><a href="#1-开始连接一个实体-NAO" class="headerlink" title="1. 开始连接一个实体 NAO"></a>1. 开始连接一个实体 NAO</h2><h3 id="1-1-运行-nao-bringup"><a href="#1-1-运行-nao-bringup" class="headerlink" title="1.1 运行 nao_bringup"></a>1.1 运行 nao_bringup</h3><p>在开始之前，我们首先要确定三个必须的依赖包 <em>naoqi_driver_，_naoqi_bridge</em> 和 <em>nao_description</em> 是否满足。这三个包可以通过包管理器或者从 github 上 clone。</p>
 <p>为了运行<em>nao_bringup</em>， 需要执行下列命令：</p>
 <p><code>$ roslaunch nao_bringup nao_full.launch nao_ip:=&lt;robot_ip&gt; roscore_ip:=&lt;roscore_ip&gt;</code></p>
 <p>如果用的是 Python SDK，则需要执行：</p>
@@ -93,7 +59,7 @@
 <p>在 RVIZ 中，将左部的”Displays”中的”Fixed Frame”修改为”&#x2F;base_link”。若只有”&#x2F;map”选项，则证明 URDF 模型没有成功加载。</p>
 <p>右部的”Target Frame”应该是<code>&lt;Fixed Frame&gt;</code>。</p>
 <p>运行第二节中行走命令，我们就能看到 RVIZ 中的 NAO 开始行走了。</p>
-</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2021-06-08T02:14:29.000Z" title="6/8/2021, 10:14:29 AM">2021-06-08</time>发表</span><span class="level-item"><time dateTime="2022-05-12T12:25:37.116Z" title="5/12/2022, 8:25:37 PM">2022-05-12</time>更新</span><span class="level-item"><a class="link-muted" href="/categories/Techniques/">Techniques</a></span><span class="level-item">5 分钟读完 (大约820个字)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2021/06/08/Techniques/2018-10-17-use-cookie-signin-weibo/">Java通过Cookie模拟登录微博</a></h1><div class="content"><h1 id="Java-通过-Cookie-模拟登录微博"><a href="#Java-通过-Cookie-模拟登录微博" class="headerlink" title="Java 通过 Cookie 模拟登录微博"></a>Java 通过 Cookie 模拟登录微博</h1><blockquote>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2021-06-08T02:14:29.000Z" title="6/8/2021, 10:14:29 AM">2021-06-08</time>发表</span><span class="level-item"><time dateTime="2022-05-12T12:35:29.300Z" title="5/12/2022, 8:35:29 PM">2022-05-12</time>更新</span><span class="level-item"><a class="link-muted" href="/categories/Techniques/">Techniques</a></span><span class="level-item">5 分钟读完 (大约820个字)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2021/06/08/Techniques/2018-10-17-use-cookie-signin-weibo/">Java通过Cookie模拟登录微博</a></h1><div class="content"><h1 id="Java-通过-Cookie-模拟登录微博"><a href="#Java-通过-Cookie-模拟登录微博" class="headerlink" title="Java 通过 Cookie 模拟登录微博"></a>Java 通过 Cookie 模拟登录微博</h1><blockquote>
 <p>笔者从开始了解到写出这篇博客一共只用了几天的时间，所以本文更适合小白参考<br>本文以 weibo.cn 为例，但只需修改 Request Header 中的部分参数，也可用与模拟登录 weibo.com</p>
 </blockquote>
 <h2 id="浏览器端操作"><a href="#浏览器端操作" class="headerlink" title="浏览器端操作"></a>浏览器端操作</h2><blockquote>
@@ -124,7 +90,7 @@
 <li><p>最后新建 Test 类，写入 Main 主方法，调用 Login()方法即可。如果代码没有问题，那么到这里就能看到自己的首页源代码了。</p>
 </li>
 </ol>
-</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2021-06-08T02:14:29.000Z" title="6/8/2021, 10:14:29 AM">2021-06-08</time>发表</span><span class="level-item"><time dateTime="2022-05-12T12:25:37.116Z" title="5/12/2022, 8:25:37 PM">2022-05-12</time>更新</span><span class="level-item"><a class="link-muted" href="/categories/Techniques/">Techniques</a></span><span class="level-item">2 分钟读完 (大约289个字)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2021/06/08/Techniques/2018-11-07-github/">Github常见操作及问题</a></h1><div class="content"><h1 id="Github-常见操作及问题"><a href="#Github-常见操作及问题" class="headerlink" title="Github 常见操作及问题"></a>Github 常见操作及问题</h1><blockquote>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2021-06-08T02:14:29.000Z" title="6/8/2021, 10:14:29 AM">2021-06-08</time>发表</span><span class="level-item"><time dateTime="2022-05-12T12:35:29.300Z" title="5/12/2022, 8:35:29 PM">2022-05-12</time>更新</span><span class="level-item"><a class="link-muted" href="/categories/Techniques/">Techniques</a></span><span class="level-item">2 分钟读完 (大约289个字)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2021/06/08/Techniques/2018-11-07-github/">Github常见操作及问题</a></h1><div class="content"><h1 id="Github-常见操作及问题"><a href="#Github-常见操作及问题" class="headerlink" title="Github 常见操作及问题"></a>Github 常见操作及问题</h1><blockquote>
 <p>笔者每次新建仓库后首次同步都记不住操作，故干脆开篇博客记录一下</p>
 </blockquote>
 <h2 id="本地仓库首次推送"><a href="#本地仓库首次推送" class="headerlink" title="本地仓库首次推送"></a>本地仓库首次推送</h2><ol>
@@ -148,7 +114,7 @@
 <p>打开之后，添加<code>xxx.xxx.xxx.xxx github.com</code>，保存并关闭即可</p>
 </li>
 </ol>
-</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2021-06-08T02:14:29.000Z" title="6/8/2021, 10:14:29 AM">2021-06-08</time>发表</span><span class="level-item"><time dateTime="2022-05-12T12:25:37.116Z" title="5/12/2022, 8:25:37 PM">2022-05-12</time>更新</span><span class="level-item"><a class="link-muted" href="/categories/Techniques/">Techniques</a></span><span class="level-item">5 分钟读完 (大约687个字)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2021/06/08/Techniques/2020-01-07-faster-rcnn-env/">Faster-RCNN环境配置</a></h1><div class="content"><h1 id="Faster-RCNN-环境配置"><a href="#Faster-RCNN-环境配置" class="headerlink" title="Faster-RCNN 环境配置"></a>Faster-RCNN 环境配置</h1><h3 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h3><ol>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2021-06-08T02:14:29.000Z" title="6/8/2021, 10:14:29 AM">2021-06-08</time>发表</span><span class="level-item"><time dateTime="2022-05-12T12:35:29.300Z" title="5/12/2022, 8:35:29 PM">2022-05-12</time>更新</span><span class="level-item"><a class="link-muted" href="/categories/Techniques/">Techniques</a></span><span class="level-item">5 分钟读完 (大约687个字)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2021/06/08/Techniques/2020-01-07-faster-rcnn-env/">Faster-RCNN环境配置</a></h1><div class="content"><h1 id="Faster-RCNN-环境配置"><a href="#Faster-RCNN-环境配置" class="headerlink" title="Faster-RCNN 环境配置"></a>Faster-RCNN 环境配置</h1><h3 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h3><ol>
 <li>创建虚拟环境</li>
 </ol>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">conda create --name &lt;env_name&gt; &lt;package_names&gt;</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">例如: conda create --name lzw python=3.6</span></span><br></pre></td></tr></table></figure>
@@ -216,6 +182,48 @@
 <ul>
 <li>解决： 重新安装 torchvision0.2.2 版本.</li>
 <li>**<em>注意</em>**：不能把 torch 版本升级到 1.0.0，不然会导致问题五的发生。</li>
+</ul>
+</li>
+</ul>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2021-06-08T02:14:29.000Z" title="6/8/2021, 10:14:29 AM">2021-06-08</time>发表</span><span class="level-item"><time dateTime="2022-05-12T12:35:29.300Z" title="5/12/2022, 8:35:29 PM">2022-05-12</time>更新</span><span class="level-item"><a class="link-muted" href="/categories/Techniques/">Techniques</a></span><span class="level-item">3 分钟读完 (大约522个字)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2021/06/08/Techniques/2020-01-08-train-with-resnet101-on-pascal_voc/">使用Faster-RCNN进行指定GPU训练</a></h1><div class="content"><h1 id="使用-Faster-RCNN-进行指定-GPU-训练"><a href="#使用-Faster-RCNN-进行指定-GPU-训练" class="headerlink" title="使用 Faster-RCNN 进行指定 GPU 训练"></a>使用 Faster-RCNN 进行指定 GPU 训练</h1><h2 id="实验内容"><a href="#实验内容" class="headerlink" title="实验内容"></a>实验内容</h2><ol>
+<li><p>解决了昨日环境配置剩下的问题（三~六），接着昨日第 7 步继续</p>
+</li>
+<li><p>测试库中用例，检查是否能跑通</p>
+<ol>
+<li><p>在”faster-rcnn.pytorch”文件夹中打开终端</p>
+</li>
+<li><p>指定 GPU 训练</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">CUDA_VISIBLE_DEVICES=$GPU_ID python trainval_net.py \</span><br><span class="line">            --dataset pascal_voc --net res101 \</span><br><span class="line">            --bs $BATCH_SIZE --nw $WORKER_NUMBER \</span><br><span class="line">            --lr $LEARNING_RATE --lr_decay_step $DECAY_STEP \</span><br><span class="line">            --cuda</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>参数意义：<ul>
+<li><code>CUDA_VISIBLE_DEVICES=$GPU_ID</code>：指明所使用的 GPU ID，<code>$GPU_ID</code>需修改为指定 ID</li>
+<li><code>--dataset pascal_voc --net res101</code>：在 pascal_voc 上使用 resnet101 进行训练</li>
+<li><code>--bs $BATCH_SIZE --nw $WORKER_NUMBER</code>：可以根据 GPU 内存大小来自适应地设置 BATCH_SIZE(批处理尺寸)和 WORKER_NUMBER。<strong>在具有 12G 内存的 Titan Xp 上，它最多可以为 4</strong></li>
+<li><code>--lr $LEARNING_RATE --lr_decay_step $DECAY_STEP </code>：**学习率(Learning rate)**作为监督学习以及深度学习中重要的超参，其决定着目标函数能否收敛到局部最小值以及何时收敛到最小值。合适的学习率能够使目标函数在合适的时间内收敛到局部最小值。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>多 GPU 训练(这一步实验没有做，“指定 GPU 实验”居然从下午三点多跑到了晚上 11 点多…)</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">python trainval_net.py \ --dataset pascal_voc --net res101 \ --bs 24 --nw 8 \ --lr $LEARING_RATE --lr_decay_step $DECAY_STEP \ --cuda --mGPUs</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">(pascal_voc.py    self._classes   类别修改)</span></span><br></pre></td></tr></table></figure></li>
+</ol>
+</li>
+</ol>
+<h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><ul>
+<li><p>问题一：<code>RuntimeError: The expanded size of the tensor (2) must match the existing size (0) at non-singleton dimension 1</code></p>
+<ul>
+<li>解决：原因在于计算二分类交叉熵损失函数时是在每个 batch 中进行的，而总的图片数量并不能被所设置的 batch_size 整除，造成最后一个 batch 的图片数量与 batch_size 不相等。</li>
+</ul>
+</li>
+<li><p>问题二：<code>AttributeError: &#39;int&#39; object has no attribute &#39;astype&#39;</code></p>
+<ul>
+<li>解决：将<code>/lib/roi_data_layer/roibatchLoader.py</code>中第 52 行的<code>target_ratio = 1</code>改为<code>target_ratio = np.array(1)</code></li>
+</ul>
+</li>
+<li><p>问题三：<code>AttributeError: &#39;Tensor&#39; object has no attribute &#39;index&#39;</code></p>
+<ul>
+<li>解决： 将 torch 的版本改为 0.4.0…所以昨天的错误到时出在哪个依赖上了？？？</li>
 </ul>
 </li>
 </ul>
