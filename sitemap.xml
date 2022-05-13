@@ -317,6 +317,15 @@
   </url>
   
   <url>
+    <loc>https://something.plus/404.html</loc>
+    
+    <lastmod>2022-05-13</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://something.plus/about/index.html</loc>
     
     <lastmod>2022-05-13</lastmod>
@@ -336,15 +345,6 @@
   
   <url>
     <loc>https://something.plus/tags/index.html</loc>
-    
-    <lastmod>2022-05-13</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://something.plus/404.html</loc>
     
     <lastmod>2022-05-13</lastmod>
     
