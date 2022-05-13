@@ -2,6 +2,132 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://something.plus/2018/08/03/Techniques/2018-08-03-install-naoqi-ros/</loc>
+    
+    <lastmod>2022-05-13</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://something.plus/2018/08/03/Techniques/2018-08-03-install-ros/</loc>
+    
+    <lastmod>2022-05-13</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://something.plus/2018/08/07/Techniques/2018-08-07-run-naoqi-on-ros/</loc>
+    
+    <lastmod>2022-05-13</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://something.plus/2018/10/17/Techniques/2018-10-17-use-cookie-signin-weibo/</loc>
+    
+    <lastmod>2022-05-13</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://something.plus/2018/11/07/Techniques/2018-11-07-github/</loc>
+    
+    <lastmod>2022-05-13</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://something.plus/2020/01/07/Techniques/2020-01-07-faster-rcnn-env/</loc>
+    
+    <lastmod>2022-05-13</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://something.plus/2020/01/08/Techniques/2020-01-08-train-with-resnet101-on-pascal_voc/</loc>
+    
+    <lastmod>2022-05-13</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://something.plus/2020/01/09/Techniques/2020-01-09-train-with-resnet101-on-pascal_voc/</loc>
+    
+    <lastmod>2022-05-13</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://something.plus/2020/01/27/Techniques/2020-01-27-mtics-resume-template/</loc>
+    
+    <lastmod>2022-05-13</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://something.plus/2020/03/02/Techniques/2020-03-02-introduction-of-gamification/</loc>
+    
+    <lastmod>2022-05-13</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://something.plus/2020/04/08/Techniques/2020-04-08-auto-sign-zzu-jksb/</loc>
+    
+    <lastmod>2022-05-13</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://something.plus/about/index.html</loc>
+    
+    <lastmod>2022-05-13</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://something.plus/categories/index.html</loc>
+    
+    <lastmod>2022-05-13</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://something.plus/tags/index.html</loc>
+    
+    <lastmod>2022-05-13</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://something.plus/2017/11/25/Courses/2017-11-25-binary-find/</loc>
     
     <lastmod>2022-05-13</lastmod>
@@ -137,7 +263,7 @@
   </url>
   
   <url>
-    <loc>https://something.plus/2021/08/06/Essays/2021-08-06-on-my-24th-birthday/</loc>
+    <loc>https://something.plus/2018/04/24/Techniques/2018-04-24-make-nao-speak/</loc>
     
     <lastmod>2022-05-13</lastmod>
     
@@ -146,7 +272,7 @@
   </url>
   
   <url>
-    <loc>https://something.plus/2018/04/24/Techniques/2018-04-24-make-nao-speak/</loc>
+    <loc>https://something.plus/2021/08/06/Essays/2021-08-06-on-my-24th-birthday/</loc>
     
     <lastmod>2022-05-13</lastmod>
     
@@ -218,133 +344,7 @@
   </url>
   
   <url>
-    <loc>https://something.plus/2018/08/03/Techniques/2018-08-03-install-naoqi-ros/</loc>
-    
-    <lastmod>2022-05-13</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://something.plus/2018/08/03/Techniques/2018-08-03-install-ros/</loc>
-    
-    <lastmod>2022-05-13</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://something.plus/2018/08/07/Techniques/2018-08-07-run-naoqi-on-ros/</loc>
-    
-    <lastmod>2022-05-13</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://something.plus/2018/10/17/Techniques/2018-10-17-use-cookie-signin-weibo/</loc>
-    
-    <lastmod>2022-05-13</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://something.plus/2018/11/07/Techniques/2018-11-07-github/</loc>
-    
-    <lastmod>2022-05-13</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://something.plus/2020/01/07/Techniques/2020-01-07-faster-rcnn-env/</loc>
-    
-    <lastmod>2022-05-13</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://something.plus/2020/01/08/Techniques/2020-01-08-train-with-resnet101-on-pascal_voc/</loc>
-    
-    <lastmod>2022-05-13</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://something.plus/2020/01/09/Techniques/2020-01-09-train-with-resnet101-on-pascal_voc/</loc>
-    
-    <lastmod>2022-05-13</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://something.plus/2020/01/27/Techniques/2020-01-27-mtics-resume-template/</loc>
-    
-    <lastmod>2022-05-13</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://something.plus/2020/03/02/Techniques/2020-03-02-introduction-of-gamification/</loc>
-    
-    <lastmod>2022-05-13</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://something.plus/2020/04/08/Techniques/2020-04-08-auto-sign-zzu-jksb/</loc>
-    
-    <lastmod>2022-05-13</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://something.plus/404.html</loc>
-    
-    <lastmod>2022-05-13</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://something.plus/about/index.html</loc>
-    
-    <lastmod>2022-05-13</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://something.plus/categories/index.html</loc>
-    
-    <lastmod>2022-05-13</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://something.plus/tags/index.html</loc>
     
     <lastmod>2022-05-13</lastmod>
     
