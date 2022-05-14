@@ -201,3 +201,44 @@ div.footer_custom_text {
     -webkit-filter: blur(0px);
   }
 }
+
+/*iconfont默认样式*/
+.icon {
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.15em;
+  fill: currentColor;
+  overflow: hidden;
+}
+
+.post-copyright {
+  background-color: rgb(204, 204, 186, 0.5);
+  border-radius: 1.5em;
+  box-shadow: 0.1em 0.1em 1em rgb(189, 192, 186, 0.75);
+}
+
+.post-copyright:hover {
+  box-shadow: 0.1em 0.1em 2em rgb(189, 192, 186, 0.95);
+}
+
+#post .post-copyright .post-copyright-meta {
+  color: #5e616d;
+}
+
+.post-copyright a {
+  color: #144a74;
+}
+
+.post-copyright a:hover {
+  color: #22a2c3;
+  text-decoration: underline;
+}
+
+.post-copyright a:visited {
+  color: #541e24;
+  text-decoration: underline;
+}
+
+#post .post-copyright:before {
+  color: #5e616d;
+}

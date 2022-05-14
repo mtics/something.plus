@@ -1,0 +1,408 @@
+<!DOCTYPE html><html lang="[&quot;zh-CN&quot;,&quot;en&quot;,&quot;default&quot;]" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>正则表达式 | 浪漫生活手册</title><meta name="keywords" content="Python"><meta name="author" content="一颗荔枝味汤圆"><meta name="copyright" content="一颗荔枝味汤圆"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="正则表达式 正则表达式为高级的文本模式匹配、抽取、与&#x2F;或文本形式的搜索和替换功能提供了基础 正则表达式（简称 regex）是一些由字符和特殊符号组成的字符串，它们描述了模式的重复或者表述多个字符 正则表达式能按照某种模式匹配多个字符串 Python 通过标准库中的 re 模块来支持正则表达式">
+<meta property="og:type" content="article">
+<meta property="og:title" content="正则表达式">
+<meta property="og:url" content="https://something.plus/2018/05/Techniques/2018-05-28-regular-expression/">
+<meta property="og:site_name" content="浪漫生活手册">
+<meta property="og:description" content="正则表达式 正则表达式为高级的文本模式匹配、抽取、与&#x2F;或文本形式的搜索和替换功能提供了基础 正则表达式（简称 regex）是一些由字符和特殊符号组成的字符串，它们描述了模式的重复或者表述多个字符 正则表达式能按照某种模式匹配多个字符串 Python 通过标准库中的 re 模块来支持正则表达式">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://something.plus/uploads/post_imgs/4.jpg">
+<meta property="article:published_time" content="2018-05-28T02:14:29.000Z">
+<meta property="article:modified_time" content="2022-05-14T12:03:38.149Z">
+<meta property="article:author" content="一颗荔枝味汤圆">
+<meta property="article:tag" content="Python">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://something.plus/uploads/post_imgs/4.jpg"><link rel="shortcut icon" href="/uploads/something.plus.3.svg"><link rel="canonical" href="https://something.plus/2018/05/Techniques/2018-05-28-regular-expression/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//www.google-analytics.com" crossorigin=""/><link rel="preconnect" href="//hm.baidu.com"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><meta name="google-site-verification" content="G-QRP6K8BZ2Y"/><meta name="baidu-site-verification" content="9e4058df3c51c54f82c8cfb85936bb96"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" media="print" onload="this.media='all'"><script>var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?9e4058df3c51c54f82c8cfb85936bb96";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script><script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-QRP6K8BZ2Y"></script><script>window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-QRP6K8BZ2Y');
+</script><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: {"limitDay":500,"position":"top","messagePrev":"It has been","messageNext":"days since the last update, the content of the article may be outdated."},
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '正则表达式',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2022-05-14 20:03:38'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><link rel="stylesheet" href="/custom/css/custom.css"><link rel="stylesheet" href="/custom/css/color.css"><link rel="stylesheet" href="/custom/css/transparent.css"><!-- hexo injector head_end start --><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-footer-beautify@1.0.0/lib/runtime.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-tag-plugins-plus@latest/lib/assets/font-awesome-animation.min.css" media="defer" onload="this.media='all'"><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-tag-plugins-plus@latest/lib/tag_plugins.css" media="defer" onload="this.media='all'"><script src="https://npm.elemecdn.com/hexo-butterfly-tag-plugins-plus@latest/lib/assets/carousel-touch.js"></script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.2.0"><link rel="alternate" href="/atom.xml" title="浪漫生活手册" type="application/atom+xml">
+</head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://s2.loli.net/2022/04/18/lYMgAfU7uI9zCpV.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data is-center"><div class="data-item"><a href="/archives/"><div class="headline">文章</div><div class="length-num">35</div></a></div><div class="data-item"><a href="/tags/"><div class="headline">标签</div><div class="length-num">13</div></a></div><div class="data-item"><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div><div class="menus_item"><a class="site-page" href="/gallery/"><i class="fa-fw fa fa-camera-retro"></i><span> Gallery</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/uploads/post_imgs/4.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">浪漫生活手册</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div><div class="menus_item"><a class="site-page" href="/gallery/"><i class="fa-fw fa fa-camera-retro"></i><span> Gallery</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">正则表达式</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2018-05-28T02:14:29.000Z" title="发表于 2018-05-28 10:14:29">2018-05-28</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-05-14T12:03:38.149Z" title="更新于 2022-05-14 20:03:38">2022-05-14</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/Techniques/">Techniques</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="正则表达式"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="正则表达式"><a href="#正则表达式" class="headerlink" title="正则表达式"></a>正则表达式</h1><ul>
+<li><em>正则表达式</em>为高级的文本模式匹配、抽取、与/或文本形式的搜索和替换功能提供了基础</li>
+<li>正则表达式（简称 regex）是一些由字符和特殊符号组成的字符串，它们描述了模式的重复或者表述多个字符</li>
+<li>正则表达式能按照某种模式匹配多个字符串</li>
+<li>Python 通过标准库中的 re 模块来支持正则表达式</li>
+</ul>
+<span id="more"></span>
+<p>举例说明：<code>[A-Za-z]\w+</code>的含义：</p>
+<ul>
+<li>第一个字符是字母也就是说要么是 A~Z，要么是 a~z</li>
+<li>后面是至少一个（+）由字母数字组成的字符（\w）</li>
+</ul>
+<h2 id="1-2-特殊符号和字符"><a href="#1-2-特殊符号和字符" class="headerlink" title="1.2 特殊符号和字符"></a>1.2 特殊符号和字符</h2><ul>
+<li><em>元字符</em>：即特殊符号和字符，给予了正则表达式强大的功能和灵活性</li>
+</ul>
+<p>正则表达式中常用个特殊符号和字符有哪些？</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>特殊符号</th>
+<th>描述</th>
+<th>示例</th>
+<th>示例意义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>\</td>
+<td></td>
+<td>管道符号，表示选择其中一个进行匹配</td>
+<td>re1\</td>
+<td>re2</td>
+<td>选择匹配正则表达式 re1 或者 re2</td>
+</tr>
+<tr>
+<td>.</td>
+<td>匹配除去\n 之外的任意字符</td>
+<td>d.d</td>
+<td>表示匹配 d 与 d 之间为任意字符的情况，如“did”“d2d”等</td>
+</tr>
+<tr>
+<td>^</td>
+<td>匹配字符串起始部分</td>
+<td>^my</td>
+<td>表示任何以 my 作为开始的字符串</td>
+</tr>
+<tr>
+<td>$</td>
+<td>匹配字符串终止符</td>
+<td>bye$</td>
+<td>表示匹配任何以 bye 结束的字符串</td>
+</tr>
+<tr>
+<td>*</td>
+<td>匹配 0 或者多次左端出现的正则表达式</td>
+<td>[0-9]*</td>
+<td>表示匹配以任意个数字开始的字符串</td>
+</tr>
+<tr>
+<td>+</td>
+<td>匹配 1 次或者多次左端出现的正则表达式</td>
+<td>[0-9]+</td>
+<td>表示匹配以 1 个或者多个数字开始的字符串</td>
+</tr>
+<tr>
+<td>？</td>
+<td>匹配 0 次或者 1 次左端出现的正则表达式</td>
+<td>[0-9]？</td>
+<td>表示匹配以 0 个或者 1 个数字开始的字符串</td>
+</tr>
+<tr>
+<td>{N}</td>
+<td>匹配 N 次左端出现的正则表达式</td>
+<td>[0-9]{N}</td>
+<td>匹表示配以 N 个数字开始的字符串</td>
+</tr>
+<tr>
+<td>{M，N}</td>
+<td>匹配 M 次到 N 次左端出现的正则表达式</td>
+<td>[0-9]{M，N}</td>
+<td>匹表示配以 M 个到 N 个数字开始的字符串</td>
+</tr>
+<tr>
+<td>[…]</td>
+<td>匹配来自括号中字符集的任意一个</td>
+<td>[abcd]</td>
+<td>表示匹配 a 或者 b 或者 c 或者 d</td>
+</tr>
+<tr>
+<td>[.-.]</td>
+<td>匹配从.到.之间的任意一个字符</td>
+<td>[a-g]</td>
+<td>表示匹配 a 到 g 之间的任意一个字符，如 a 或 b…</td>
+</tr>
+<tr>
+<td><sup><a href="#fn_..." id="reffn_...">...</a></sup></td>
+<td>不匹配此字符集中的任何一个字符</td>
+<td><sup><a href="#fn_abc" id="reffn_abc">abc</a></sup></td>
+<td>表示匹配不是字符 a 或 b 或 c 的任意字符</td>
+</tr>
+<tr>
+<td>（）</td>
+<td>对正则表达式进行分组或者匹配子组</td>
+<td>（[0-9]{3}）?</td>
+<td>表示匹配三个数字出现一次或者不出现的情况</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>特殊字符</th>
+<th>描述</th>
+<th>示例</th>
+<th>示例意义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>\d (\D)</td>
+<td>\d 匹配任何一个十进制数字，\D 不匹配任何数字</td>
+<td>\d\d\d</td>
+<td>匹配三个数字的字符串</td>
+</tr>
+<tr>
+<td>\w (\W)</td>
+<td>\w 匹配任何一个字母字符，\W 不匹配任何字母字符</td>
+<td>\w+</td>
+<td>匹配一个由字母字符组成的字符串</td>
+</tr>
+<tr>
+<td>\s (\S)</td>
+<td>\s 匹配任何空格字符，\S 不匹配任何空格字符</td>
+<td>of\sthe</td>
+<td>匹配 of 和 the 之间有任何空格字符的情况</td>
+</tr>
+<tr>
+<td>\b(\B)</td>
+<td>\b 匹配任何单词边界,\B 不匹配任何单词边界</td>
+<td>\bthe</td>
+<td>任何以 the 开始的字符串</td>
+</tr>
+<tr>
+<td>\N</td>
+<td>匹配已保存的子组 N</td>
+<td>price：\N</td>
+<td>匹配 price:后面加已保存的子组 N 的形式</td>
+</tr>
+<tr>
+<td>\c</td>
+<td>仅按照 c 的字面意思进行匹配</td>
+<td>*</td>
+<td>匹配字符*</td>
+</tr>
+<tr>
+<td>\A(\Z)</td>
+<td>\A 匹配字符串的开始，\Z 匹配字符串的结尾</td>
+<td>\Acar</td>
+<td>匹配以 car 开始的字符串</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>我们发现在特殊字符中大写往往表示与小写意义相反，可以用来帮助记忆。</p>
+<h3 id="1-2-1-使用择一匹配符号匹配多个正则表达式模式"><a href="#1-2-1-使用择一匹配符号匹配多个正则表达式模式" class="headerlink" title="1.2.1 使用择一匹配符号匹配多个正则表达式模式"></a>1.2.1 使用择一匹配符号匹配多个正则表达式模式</h3><ul>
+<li><p>择一匹配有时候也称作并（union）或者逻辑或（logical OR）</p>
+</li>
+<li><p>表示择一匹配的管道符号（|）表示一个“从多个模式中选择其一”的操作。</p>
+</li>
+<li>它用于分割不同的正则表达式</li>
+</ul>
+<p>例如，正则表达式模式<code>at|home</code>，匹配到的字符串为<code>at、home</code></p>
+<h3 id="1-2-2-匹配任意单个字符"><a href="#1-2-2-匹配任意单个字符" class="headerlink" title="1.2.2 匹配任意单个字符"></a>1.2.2 匹配任意单个字符</h3><ul>
+<li>点号（.）符号匹配除了换行符（\n）以外的任何字符。</li>
+</ul>
+<p>例如，正则表达式模式<code>f.o</code>能够匹配在字母”f”和”o”之间的任意一个字符，像 fao, f9o, f#o 等</p>
+<ul>
+<li><strong>注意</strong>：如要匹配句点符号（.），必须使用反斜线转义句点符号的功能，比如”\.”</li>
+</ul>
+<h3 id="1-2-3-从字符串起始或者结尾或者单词边界匹配"><a href="#1-2-3-从字符串起始或者结尾或者单词边界匹配" class="headerlink" title="1.2.3 从字符串起始或者结尾或者单词边界匹配"></a>1.2.3 从字符串起始或者结尾或者单词边界匹配</h3><ul>
+<li>如果要匹配字符串的开始位置，就必须使用脱字符（^）或者特殊字符\A。后者主要用于那些没有脱字符的减排</li>
+<li>美元符号（$）或者\Z 将用于匹配字符串的末尾位置</li>
+<li>特殊字符\b 和\B 可以用来匹配字符边界。<ul>
+<li>\b 将用于匹配一个单词的边界，这一位这如果一个模式必须位于单词的起始部分，就不管该单词前面是否有任何字符</li>
+<li>\B 将匹配出现在一个单词中间的模式（即不是单词边界）</li>
+</ul>
+</li>
+</ul>
+<p>例如：</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">正则表达式模式</th>
+<th style="text-align:center">匹配的字符串</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">^From</td>
+<td style="text-align:center">任何以 From 作为起始的字符串</td>
+</tr>
+<tr>
+<td style="text-align:center">/bin/tcsh$</td>
+<td style="text-align:center">任何以/bin/tcsh 作为结尾的字符串</td>
+</tr>
+<tr>
+<td style="text-align:center">^Subject:hi$</td>
+<td style="text-align:center">任何由单独的字符串 Subject:hi 构成的字符串</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">一颗荔枝味汤圆</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://something.plus/2018/05/Techniques/2018-05-28-regular-expression/">https://something.plus/2018/05/Techniques/2018-05-28-regular-expression/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://something.plus" target="_blank">浪漫生活手册</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/Python/">Python</a></div><div class="post_share"><div class="social-share" data-image="/uploads/post_imgs/4.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2018/08/Techniques/2018-08-03-install-ros/"><img class="prev-cover" src="/uploads/post_imgs/3.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">NAO学习——ROS的安装</div></div></a></div><div class="next-post pull-right"><a href="/2018/05/Techniques/2018-05-27-an-easy-python-excerse-1/"><img class="next-cover" src="/uploads/post_imgs/4.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">Python练手小项目（一）——在图片上加上数字</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2018/04/Techniques/2018-04-24-make-nao-speak/" title="Python SDK入门 (1)——让NAO说话"><img class="cover" src="/uploads/post_imgs/1.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2018-04-24</div><div class="title">Python SDK入门 (1)——让NAO说话</div></div></a></div><div><a href="/2018/04/Techniques/2018-04-25-make-nao-speak-and-move/" title="Python SDK入门（2）——让NAO行走并说话"><img class="cover" src="/uploads/post_imgs/6.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2018-04-25</div><div class="title">Python SDK入门（2）——让NAO行走并说话</div></div></a></div><div><a href="/2018/04/Techniques/2018-04-27-react-to-event/" title="Python SDK入门（3）——对事件做出反应"><img class="cover" src="/uploads/post_imgs/7.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2018-04-27</div><div class="title">Python SDK入门（3）——对事件做出反应</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F"><span class="toc-number">1.</span> <span class="toc-text">正则表达式</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-2-%E7%89%B9%E6%AE%8A%E7%AC%A6%E5%8F%B7%E5%92%8C%E5%AD%97%E7%AC%A6"><span class="toc-number">1.1.</span> <span class="toc-text">1.2 特殊符号和字符</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-1-%E4%BD%BF%E7%94%A8%E6%8B%A9%E4%B8%80%E5%8C%B9%E9%85%8D%E7%AC%A6%E5%8F%B7%E5%8C%B9%E9%85%8D%E5%A4%9A%E4%B8%AA%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E6%A8%A1%E5%BC%8F"><span class="toc-number">1.1.1.</span> <span class="toc-text">1.2.1 使用择一匹配符号匹配多个正则表达式模式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-2-%E5%8C%B9%E9%85%8D%E4%BB%BB%E6%84%8F%E5%8D%95%E4%B8%AA%E5%AD%97%E7%AC%A6"><span class="toc-number">1.1.2.</span> <span class="toc-text">1.2.2 匹配任意单个字符</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-3-%E4%BB%8E%E5%AD%97%E7%AC%A6%E4%B8%B2%E8%B5%B7%E5%A7%8B%E6%88%96%E8%80%85%E7%BB%93%E5%B0%BE%E6%88%96%E8%80%85%E5%8D%95%E8%AF%8D%E8%BE%B9%E7%95%8C%E5%8C%B9%E9%85%8D"><span class="toc-number">1.1.3.</span> <span class="toc-text">1.2.3 从字符串起始或者结尾或者单词边界匹配</span></a></li></ol></li></ol></li></ol></div></div></div></div></main><footer id="footer" style="background-image: url('/uploads/post_imgs/4.jpg')"><div id="footer-wrap"><div class="copyright">&copy;2017 - 2022 By 一颗荔枝味汤圆</div><div class="footer_custom_text">可是他说："来日方长"</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script><script>var preloader = {
+  endLoading: () => {
+    document.body.style.overflow = 'auto';
+    document.getElementById('loading-box').classList.add("loaded")
+  },
+  initLoading: () => {
+    document.body.style.overflow = '';
+    document.getElementById('loading-box').classList.remove("loaded")
+
+  }
+}
+window.addEventListener('load',preloader.endLoading())</script><div class="js-pjax"></div><script async src="/custom/js/diy_title.js"></script><script async src="//at.alicdn.com/t/font_3400659_mstaynetitk.js"></script><script src="/custom/js/post.js"></script><script id="click-show-text" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/click-show-text.min.js" data-mobile="false" data-text="嗯嗯,啊对对对,是的呢" data-fontsize="15px" data-random="false" async="async"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><!-- hexo injector body_end start --><script data-pjax>
+  function butterfly_footer_beautify_injector_config(){
+    var parent_div_git = document.getElementById('footer-wrap');
+    var item_html = '<p id="ghbdages"><a class="github-badge" target="_blank" href="https://hexo.io/" style="margin-inline:5px" data-title="本站使用HEXO作为静态网站框架" title=""><img src="https://img.shields.io/badge/Frame-Hexo-blue?style=flat&amp;logo=hexo" alt=""/></a><a class="github-badge" target="_blank" href="https://butterfly.js.org/" style="margin-inline:5px" data-title="本站主题为Hexo-Butterfly" title=""><img src="https://img.shields.io/badge/Theme-Butterfly-6513df?style=flat&amp;logo=bitdefender" alt=""/></a><a class="github-badge" target="_blank" href="https://github.com/" style="margin-inline:5px" data-title="本站托管在Github" title=""><img src="https://img.shields.io/badge/Source-Github-d021d6?style=flat&amp;logo=GitHub" alt=""/></a><a class="github-badge" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" style="margin-inline:5px" data-title="本站采用知识共享署名-非商业性使用-相同方式共享4.0国际许可协议进行许可" title=""><img src="https://img.shields.io/badge/Copyright-BY--NC--SA%204.0-d42328?style=flat&amp;logo=Claris" alt=""/></a></p>';
+    console.log('已挂载butterfly_footer_beautify')
+    parent_div_git.insertAdjacentHTML("beforeend",item_html)
+    }
+  var elist = 'null'.split(',');
+  var cpage = location.pathname;
+  var epage = 'all';
+  var flag = 0;
+
+  for (var i=0;i<elist.length;i++){
+    if (cpage.includes(elist[i])){
+      flag++;
+    }
+  }
+
+  if ((epage ==='all')&&(flag == 0)){
+    butterfly_footer_beautify_injector_config();
+  }
+  else if (epage === cpage){
+    butterfly_footer_beautify_injector_config();
+  }
+  </script><script async src="//at.alicdn.com/t/font_2032782_8d5kxvn09md.js"></script><!-- hexo injector body_end end --></body></html>
