@@ -1,14 +1,15 @@
 /* 页脚透明 */
 #footer {
-  background: transparent !important;
+  background: rgb(0, 0, 0, 0.6);
+  box-shadow: 0.1em -1em 2em rgb(0, 0, 0, 0.6);
 }
 /* 页脚黑色透明玻璃效果移除 */
 #footer::before {
-  background: transparent !important;
+  background: transparent;
 }
 /* 头图透明 */
 #page-header {
-  background: transparent !important;
+  background: transparent;
 }
 /* 头图遮罩层透明 */
 #page-header::before {
@@ -20,8 +21,8 @@
 } */
 /*夜间模式伪类遮罩层透明*/
 [data-theme="dark"] #footer::before {
-  background: transparent !important;
+  background: transparent;
 }
 [data-theme="dark"] #page-header::before {
-  background: transparent !important;
+  background: transparent;
 }

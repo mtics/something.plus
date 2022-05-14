@@ -117,8 +117,15 @@ h6::before {
 
 /* 设置首页文章封面块 */
 /* 设置宽度 */
-#recent-posts > .recent-post-item {
-  height: 15em;
+@media screen and (min-width: 769px) {
+  div.recent-post-item {
+    height: 14em !important;
+  }
+}
+@media screen and (max-width: 768px) {
+  div.recent-post-item {
+    height: 25em;
+  }
 }
 
 /* 设置标题字体大小 */
@@ -156,11 +163,41 @@ h6::before {
 /* 页脚div不换行 */
 #footer-wrap div {
   display: inline-block;
-  margin: 0 0.25em 0 0.25em;
+  margin: 0 0 0 0.1em;
+}
+/* 在版权信息和自定义文本之间插入一颗心 */
+div.copyright::after {
+  content: "☺";
+  padding-left: 0.25em;
 }
 /* 页脚自定义文本样式 */
 div.footer_custom_text {
   padding-left: 0.2em;
   font-style: italic; /* 斜体 */
   text-shadow: 0.15em 0.15em rgba(249, 241, 219, 0.4);
+}
+
+/* 首页头图和背景由模糊变清晰 */
+/*1s为加载动画的时间，1为加载动画的次数，ease-in-out为动画效果*/
+#page-header,
+#web_bg {
+  -webkit-animation: imgblur 1s 1 ease-in-out;
+  animation: imgblur 1s 1 ease-in-out;
+}
+@keyframes imgblur {
+  0% {
+    filter: blur(5px);
+  }
+  100% {
+    filter: blur(0px);
+  }
+}
+/*适配使用-webkit内核的浏览器 */
+@-webkit-keyframes imgblur {
+  0% {
+    -webkit-filter: blur(5px);
+  }
+  100% {
+    -webkit-filter: blur(0px);
+  }
 }
