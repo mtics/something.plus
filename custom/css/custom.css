@@ -95,9 +95,9 @@ h6::before {
 }
 
 /* 设置背景颜色 */
-#web_bg {
-  background: var(--card-bg) !important; /* 慎用!important */
-}
+/* #web_bg {
+  background: var(--card-bg) !important;
+} */
 
 /* 图片下的题注文字居中 */
 .jg-caption {
@@ -146,4 +146,21 @@ h6::before {
   visibility: visible;
   opacity: 1;
   transition: visibility 0s, opacity 0.5s linear;
+}
+
+/* 页脚居左排版 */
+#footer-wrap {
+  text-align: left;
+}
+
+/* 页脚div不换行 */
+#footer-wrap div {
+  display: inline-block;
+  margin: 0 0.25em 0 0.25em;
+}
+/* 页脚自定义文本样式 */
+div.footer_custom_text {
+  padding-left: 0.2em;
+  font-style: italic; /* 斜体 */
+  text-shadow: 0.15em 0.15em rgba(249, 241, 219, 0.4);
 }
