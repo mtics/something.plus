@@ -250,3 +250,13 @@ div.footer_custom_text {
   height: 12em;
   background: rgb(0, 0, 0, 0.8);
 }
+
+#aside-content .card-widget,
+#recent-posts > .recent-post-item,
+.layout > div:first-child:not(.recent-posts) {
+  box-shadow: 0.1em 0.4em 0.5em rgba(12, 12, 12, 0.8);
+}
+
+#page-header #post-info {
+  text-shadow: 0.1em 0.1em 0.3em rgb(12, 12, 12, 0.85);
+}

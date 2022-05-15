@@ -1,0 +1,16 @@
+#page-header.nav-fixed #nav a,
+#page-header.nav-fixed #nav #site-name,
+#page-header.nav-fixed #nav #toggle-menu {
+  color: rgb(250, 250, 242);
+}
+
+#page-header.nav-fixed #nav {
+  background: rgba(120, 120, 120, 45%);
+  -webkit-box-shadow: 0 5px 6px -5px rgba(120, 120, 120, 45%);
+  box-shadow: 0 5px 21px -0.2em rgb(133, 133, 133, 60%);
+}
+
+#nav #site-name,
+#nav .site-page {
+  text-shadow: 0.1em 0.1em 0.3em rgb(13, 13, 13, 85%);
+}
