@@ -2,15 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://something.plus/tags/</loc>
-    
-    <lastmod>2022-06-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://something.plus/2017/11/Courses/2017-11-25-binary-find/</loc>
     
     <lastmod>2022-06-22</lastmod>
@@ -363,6 +354,15 @@
   
   <url>
     <loc>https://something.plus/categories/</loc>
+    
+    <lastmod>2022-06-22</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://something.plus/tags/</loc>
     
     <lastmod>2022-06-22</lastmod>
     
